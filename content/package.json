@@ -8,11 +8,13 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@types/node": "^18.15.3",
     "nuxt": "^3.3.1"
   },
   "dependencies": {
     "@nuxt/content": "^2.5.2",
-    "@nuxt/kit": "^3.3.1",
-    "@vueuse/nuxt": "^9.13.0"
+    "@vueuse/nuxt": "^9.13.0",
+    "pathe": "^1.1.0",
+    "url": "^0.11.0"
   }
 }
