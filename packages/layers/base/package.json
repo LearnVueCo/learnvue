@@ -16,10 +16,7 @@
   "scripts": {
     "build": "nuxt build .playground",
     "dev": "nuxi dev .playground",
-    "generate": "nuxt generate .playground",
-    "postinstall": "nuxt prepare .playground",
-    "lint": "eslint .",
-    "preview": "nuxt preview .playground"
+    "lint": "eslint ."
   },
   "dependencies": {
     "@nuxtjs/fontaine": "^0.2.4",
