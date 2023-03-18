@@ -27,6 +27,7 @@
   "devDependencies": {
     "@nuxt/eslint-config": "^0.1.1",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "@types/node": "^18.15.3",
     "eslint": "^8.28.0",
     "nuxt": "^3.0.0",
     "release-it": "^15.5.0",
