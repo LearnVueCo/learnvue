@@ -1,7 +1,11 @@
 {
   "name": "@learnvue/theme",
-  "type": "module",
   "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/LearnVueCo/learnvue.git"
+  },
+  "type": "module",
   "main": "./nuxt.config.ts",
   "files": [
     "components",
@@ -10,23 +14,40 @@
     "tailwind.config.ts"
   ],
   "scripts": {
-    "dev": "nuxi dev .playground",
     "build": "nuxt build .playground",
+    "dev": "nuxi dev .playground",
     "generate": "nuxt generate .playground",
-    "preview": "nuxt preview .playground",
+    "postinstall": "nuxt prepare .playground",
     "lint": "eslint .",
-    "postinstall": "nuxt prepare .playground"
-  },
-  "devDependencies": {
-    "@nuxt/eslint-config": "^0.1.1",
-    "eslint": "^8.28.0",
-    "nuxt": "^3.0.0",
-    "typescript": "^4.9.3"
+    "preview": "nuxt preview .playground"
   },
   "dependencies": {
     "@nuxtjs/fontaine": "^0.2.4",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@vueuse/nuxt": "^9.13.0",
     "nuxt-icon": "^0.3.3"
+  },
+  "devDependencies": {
+    "@nuxt/eslint-config": "^0.1.1",
+    "@release-it-plugins/lerna-changelog": "^5.0.0",
+    "eslint": "^8.28.0",
+    "nuxt": "^3.0.0",
+    "release-it": "^15.5.0",
+    "typescript": "^4.9.3"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  },
+  "release-it": {
+    "npm": {
+      "access": "public"
+    },
+    "git": {
+      "commitMessage": "chore(release)[layer/base]: release v${version}"
+    },
+    "github": {
+      "release": true,
+      "tokenRef": "GITHUB_AUTH"
+    }
   }
 }
