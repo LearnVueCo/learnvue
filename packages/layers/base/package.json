@@ -1,6 +1,6 @@
 {
   "name": "@learnvue/theme",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "https://github.com/LearnVueCo/learnvue.git"
@@ -47,7 +47,7 @@
     },
     "github": {
       "release": true,
-      "tokenRef": "GITHUB_AUTH"
+      "releaseName": "v${version}"
     }
   }
 }
