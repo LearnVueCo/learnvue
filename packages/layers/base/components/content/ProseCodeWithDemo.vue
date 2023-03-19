@@ -4,14 +4,14 @@ withDefaults(
     demoTitle?: string
   }>(),
   {
-    demoTitle: 'Preview',
+    demoTitle: 'Preview'
   }
 )
 </script>
 
 <template>
   <div class="relative grid grid-cols-2 gap-4 text-base">
-    <div class="col-span-2 rounded bg-charcoal-800 lg:col-span-1">
+    <div class="col-span-2 rounded bg-default lg:col-span-1">
       <slot name="code" />
     </div>
     <div
@@ -28,7 +28,7 @@ withDefaults(
           {{ demoTitle }}
         </div>
       </div>
-      <div class="p-8">
+      <div class="p-8 max-h-[500px]">
         <slot name="demo" />
       </div>
     </div>
