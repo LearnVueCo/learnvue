@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     Child: typeof import('./src/components/writable-computed-v-model/Child.vue')['default']
+    LearnVueIcon: typeof import('./src/components/LearnVueIcon.vue')['default']
     MyButton: typeof import('./src/components/atoms/MyButton.vue')['default']
     MyInput: typeof import('./src/components/writable-computed-v-model/MyInput.vue')['default']
     Parent: typeof import('./src/components/writable-computed-v-model/Parent.vue')['default']

@@ -1,3 +1,388 @@
+@import url('https://fonts.bunny.net/css?family=inter:400,500,600,700|rubik:200,300,400,500,600,700,800,900|roboto-mono:400');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  *,
+  ::before,
+  ::after {
+    @apply dark:border-charcoal-600;
+  }
+}
+@layer components {
+  .btn-offset {
+    @apply -ml-4 -mt-2;
+  }
+
+  .btn-tight {
+  }
+
+  .btn-wide {
+    @apply rounded px-6 py-2 font-medium;
+  }
+
+  .btn-highlight {
+    @apply bg-highlight hover:brightness-95 disabled:brightness-100 dark:hover:hover:brightness-125 disabled:dark:hover:brightness-100;
+  }
+
+  .btn-bg {
+    @apply bg-highlight hover:brightness-95 disabled:brightness-100 dark:hover:hover:brightness-125 disabled:dark:hover:brightness-100;
+  }
+
+  .btn-outline {
+    @apply border-2;
+  }
+
+  .btn-green {
+    @apply bg-green text-white hover:bg-green-400 disabled:hover:bg-green;
+  }
+}
+@layer utilities {
+  .text-gradient {
+    background: -webkit-linear-gradient(
+      30deg,
+      theme('colors.blue.400'),
+      theme('colors.green.500')
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply relative inline-block;
+  }
+
+  .text-gradient::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -10%;
+    bottom: -2.75rem;
+    height: 100%;
+    width: 120%;
+    @apply bg-charcoal bg-cover bg-no-repeat dark:bg-white;
+    -webkit-mask: url('~~/assets/img/excalidraw/underline.svg') no-repeat;
+    mask: url('~~/assets/img/excalidraw/underline.svg') no-repeat;
+    mask-size: 100% auto;
+  }
+}
+
+@layer utilities {
+  .shadow-default-sm {
+    @apply shadow-sm dark:shadow-smDark;
+  }
+  .shadow-default,
+  .shadow-default-lg {
+    @apply shadow-lg dark:shadow-lgDark;
+  }
+
+  .shadow-default-xl {
+    @apply shadow-xl dark:shadow-xlDark;
+  }
+
+  .shadow-hover {
+    @apply shadow-default hover:shadow-default-xl transition-shadow;
+  }
+
+  .bg-default {
+    @apply bg-white dark:bg-charcoal-800;
+  }
+  .text-default {
+    @apply text-charcoal-700  dark:text-zinc-200;
+  }
+
+  .bg-highlight {
+    @apply bg-white dark:bg-charcoal-700;
+  }
+
+  .bg-background {
+    @apply bg-gray-100 dark:bg-charcoal-700;
+  }
+
+  .text-highlight {
+    @apply text-charcoal dark:text-white;
+  }
+
+  .fill-highlight {
+    @apply fill-charcoal dark:fill-white;
+  }
+
+  .ring-highlight {
+    @apply ring-charcoal dark:ring-white;
+  }
+
+  .stroke-highlight {
+    @apply stroke-charcoal dark:stroke-white;
+  }
+
+  .border-highlight {
+    @apply border-charcoal dark:border-white;
+  }
+}
+
+html {
+  font-family: Rubik, -apple-system, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Virgil;
+  src: url('~~/assets/fonts/Virgil.woff2');
+}
+@font-face {
+  font-family: Cascadia;
+  src: url('~~/assets/fonts/Cascadia.woff2');
+}
+
+code {
+  @apply font-mono font-normal;
+}
+
+dialog {
+  @apply text-inherit;
+}
+
+html {
+  --base-bg: #ffffff;
+}
+html.dark {
+  color-scheme: dark;
+  --base-bg: #15181e;
+}
+
+.target:target {
+  scroll-margin-top: 80px !important;
+}
+
+.hide-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @apply text-highlight font-sans font-semibold;
+}
+
+input:-internal-autofill-selected {
+  @apply bg-highlight !important;
+}
+
+button:focus-visible,
+a:focus-visible {
+  @apply text-highlight underline;
+}
+
+.prose {
+  @apply leading-relaxed;
+}
+
+.article > *:not(:first-child) {
+  @apply mt-6;
+}
+
+.article > h1:target,
+.article > h1:target,
+.article > h2:target,
+.article > h3:target,
+.article > h4:target,
+.article > h5:target,
+.scroll-target {
+  scroll-margin-top: 5rem;
+}
+
+.article {
+  @apply leading-7 lg:text-lg lg:leading-9;
+}
+
+.prose
+  *:not(h1):not(h2):not(h3):not(h4):not(h5)
+  a:not(.no-underline):not(.custom-block a):not(.custom-block) {
+  @apply font-medium text-charcoal-900 dark:text-white;
+}
+
+.prose
+  a:not(.no-underline):not(h1 a, h2 a, h3 a, h4 a, h5 a):not(
+    .custom-block a
+  ):not(.custom-block) {
+  @apply border-b-2 border-green border-opacity-50 transition-[border] hover:border-opacity-100;
+}
+
+.prose strong,
+.prose b {
+  @apply font-semibold text-charcoal dark:text-white;
+}
+
+.article > h2,
+.article > h3,
+.article > h4,
+.article > h5 {
+  @apply mt-8 !border-b-0 pt-8 font-sans text-2xl font-semibold;
+}
+
+.article > h2 {
+  @apply mt-16 pt-16;
+}
+
+.article > h2 + h3 {
+  @apply mt-0;
+}
+
+/* .prose:not(.custom-block) p:not(.custom-block p) {
+  @apply mt-16;
+} */
+.article > h2:not(article .toc h2) {
+  @apply border-t border-charcoal-600 border-opacity-50 text-3xl dark:border-charcoal-300 dark:border-opacity-50;
+}
+
+.prose p > code,
+.prose ul code,
+.prose h2 code,
+.prose h3 code {
+  @apply rounded bg-green  bg-opacity-20 px-2  text-sm text-green-900 dark:bg-green-200 dark:bg-opacity-10 dark:text-green-50 !important;
+}
+
+.prose > p > img {
+  @apply max-w-full;
+}
+
+.article > h2 > a code {
+  @apply text-2xl !important;
+}
+
+.prose > ul {
+  @apply list-disc pl-8;
+}
+
+.prose > ol {
+  @apply list-decimal pl-8;
+}
+
+.prose li + li {
+  @apply mt-1;
+}
+
+.prose > ol ol {
+  @apply list-[lower-alpha];
+}
+
+article img:not(.custom-block img) {
+  @apply mx-auto rounded-lg;
+}
+
+/* we will explain what these classes do next! */
+.slide-enter-active,
+.slide-leave-active {
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.slide-enter-from,
+.slide-leave-to {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.sleft-enter-active,
+.sleft-leave-active,
+.sright-enter-active,
+.sright-leave-active {
+  transition: opacity 0.15s ease-out, transform 0.21s ease-out;
+}
+
+.sleft-enter-from,
+.sright-leave-to {
+  opacity: 0;
+  transform: translateX(50px);
+}
+.sleft-leave-to,
+.sright-enter-from {
+  opacity: 0;
+  transform: translateX(-50px);
+}
+
+.slide-up-enter-active,
+.slide-up-leave-active {
+  transition: opacity 0.25s ease-out, transform 0.2s ease-out;
+}
+
+.slide-up-enter-from,
+.slide-up-leave-to {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+}
+
+.icon-enter-active,
+.icon-leave-active {
+  transition: transform 0.1s ease;
+}
+
+.icon-enter-from,
+.icon-leave-to {
+  transform: scale(0.8);
+}
+
+.bg-gradient-blue {
+  background: rgb(71, 207, 255);
+  background: linear-gradient(
+    144deg,
+    rgba(71, 207, 255, 0.75) 0%,
+    rgba(93, 211, 252, 0.75) 100%
+  );
+}
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+.test-enter-active {
+  transition: opacity 0.5s ease;
+  transition-delay: 0.5s;
+}
+.test-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+.test-enter-from,
+.test-leave-to {
+  opacity: 0;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+.custom-scrollbar {
+  scrollbar-width: auto;
+  scrollbar-color: #15ca82 #ffffff;
+}
+
+.dark .custom-scrollbar {
+  scrollbar-color: #15ca82 #1e1e1e;
+}
+
+/* Chrome, Edge, and Safari */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-default;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-500 bg-opacity-50 dark:bg-charcoal-600;
+  border-radius: 10px;
+}

@@ -13,7 +13,7 @@ export default defineConfig({
   },
 
   plugins: [
-    Icons({ compiler: 'vue3' }),
+    Icons({ compiler: 'vue3', autoInstall: true }),
     vue(),
     Components({
       dirs: ['./src/components'],
