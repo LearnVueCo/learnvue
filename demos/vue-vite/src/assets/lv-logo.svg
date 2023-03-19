@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="logo-dark-mode" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1170.85 256">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3 {
+        fill: #15ca82;
+      }
+
+      .cls-4, .cls-5 {
+        fill: #404959;
+      }
+
+      .cls-6 {
+        font-family: Inter-Bold, Inter;
+        font-size: 192px;
+        font-variation-settings: 'wght' 700, 'slnt' 0;
+      }
+
+      .cls-5 {
+        isolation: isolate;
+        opacity: .44;
+      }
+
+      .cls-2 {
+        letter-spacing: -.05em;
+      }
+    </style>
+  </defs>
+  <g id="Page-1">
+    <g id="Custom-Preset">
+      <g id="logo">
+        <path id="Triangle" class="cls-4" d="M51.55,17.02l114.16,200.57c5.87,10.31,2.36,23.47-7.84,29.4-3.25,1.89-6.94,2.88-10.7,2.87l-95.58-.33c-22-.08-39.8-18.13-39.8-40.38V27.76c0-11.89,9.54-21.53,21.3-21.53,7.62,0,14.66,4.12,18.46,10.79Z"/>
+        <path id="Triangle-Copy-2" class="cls-3" d="M129.98,240.07l-47.13-78.54c-6.11-10.18-2.81-23.38,7.37-29.49,3.35-2.01,7.19-3.07,11.09-3.06l94.33,.15c11.13,.02,20.14,9.05,20.12,20.18,0,3.65-1,7.22-2.88,10.35l-48.35,80.42c-5.73,9.54-18.11,12.62-27.65,6.89-2.83-1.7-5.2-4.07-6.9-6.9Z"/>
+        <path id="Path" class="cls-5" d="M101.31,128.99l13.98,.02,50.41,88.58c3.2,5.62,3.61,12.09,1.67,17.77l-2.85,4.74c-3.5,5.82-9.47,9.23-15.76,9.71l-.61,.04h-.38s-.38,.02-.38,.02c-3.59,.03-7.23-.9-10.53-2.88-2.83-1.7-5.2-4.07-6.9-6.9l-47.13-78.54c-6.11-10.18-2.81-23.38,7.37-29.49,3.35-2.01,7.19-3.07,11.09-3.06Z"/>
+      </g>
+    </g>
+  </g>
+  <text class="cls-6" transform="translate(238.12 196.79)"><tspan class="cls-1" x="0" y="0">Lear</tspan><tspan class="cls-2" x="413.58" y="0">n</tspan><tspan class="cls-3" x="523.15" y="0">Vue</tspan></text>
+</svg>

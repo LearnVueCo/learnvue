@@ -25,6 +25,7 @@
     "nuxt-icon": "^0.3.3"
   },
   "devDependencies": {
+    "@nuxt/content": "^2.5.2",
     "@nuxt/eslint-config": "^0.1.1",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@types/node": "^18.15.3",

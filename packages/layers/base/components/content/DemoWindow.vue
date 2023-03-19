@@ -7,7 +7,7 @@ const props = withDefaults(
   }>(),
   {
     type: 'nuxt',
-    windowed: true,
+    windowed: true
   }
 )
 
@@ -15,9 +15,9 @@ const iFrameSrc = computed(() => {
   let basePath = ''
   if (process.dev) {
     if (props.type === 'nuxt') {
-      basePath = 'http://localhost:5175'
+      basePath = 'http://localhost:8086'
     } else {
-      basePath = 'http://localhost:5173'
+      basePath = 'http://localhost:8085'
     }
   } else {
     basePath = `https://demo.learnvue.co/${props.type}`

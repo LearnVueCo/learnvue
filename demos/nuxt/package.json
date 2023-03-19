@@ -1,0 +1,34 @@
+{
+  "name": "lv-nuxt",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev --port 8086",
+    "dev:https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem --port 8086",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxt/content": "2.4.2",
+    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
+    "@nuxtjs/i18n": "^8.0.0-beta.9",
+    "@nuxtjs/supabase": "^0.3.0",
+    "@nuxtjs/tailwindcss": "^6.4.1",
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "^18.11.18",
+    "nuxt": "3.3.0",
+    "nuxt-seo-kit": "^1.2.3",
+    "@nuxt/devtools": "npm:@nuxt/devtools-edge@latest"
+  },
+  "workspaces": {
+    "nohoist": [
+      "@nuxtjs/supabase"
+    ]
+  },
+  "dependencies": {
+    "@storyblok/nuxt": "^5.0.2",
+    "@vueuse/nuxt": "^9.13.0",
+    "nuxt-icon": "^0.1.6"
+  }
+}

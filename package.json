@@ -1,0 +1,12 @@
+{
+  "name": "learnvue-monorepo",
+  "private": true,
+  "workspaces": [
+    "content",
+    "packages/**/*",
+    "demos/*"
+  ],
+  "scripts": {
+    "dev": "turbo dev"
+  }
+}

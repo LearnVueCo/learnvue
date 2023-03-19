@@ -1,0 +1,11 @@
+<script setup lang="ts">
+const emit = defineEmits(['customChange'])
+
+const handleChange = (event: Event) => {
+  emit('customChange', (event.target as HTMLInputElement).value.toUpperCase())
+}
+</script>
+
+<template>
+  <input type="text" @input="handleChange" />
+</template>

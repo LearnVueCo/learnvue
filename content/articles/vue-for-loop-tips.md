@@ -61,7 +61,7 @@ const products = ref([
 
 #demo
 
-  ::demo-v-for
+:demo-v-for
 ::
 
 ## Add key to Vue v-for loops
@@ -198,64 +198,64 @@ sFilename: Child.vue
 sLang: vue
 ---
 
-  #first
+#first
 
-  ```vue {29}
-  <script setup>
-  import { ref } from 'vue'
+```vue {29}
+<script setup>
+import { ref } from 'vue'
 
-  const products = ref([
-    {id: 0, name: 'shirt'},
-    {id: 1, name: 'jacket'},
-    {id: 2, name: 'shoes'}
-  ])
+const products = ref([
+  {id: 0, name: 'shirt'},
+  {id: 1, name: 'jacket'},
+  {id: 2, name: 'shoes'}
+])
 
-  const reorder = () => {
-    // shift products upwards
-    products.value = [
-      products.value[1],
-      products.value[2],
-      products.value[0]
-    ]
-  }
+const reorder = () => {
+  // shift products upwards
+  products.value = [
+    products.value[1],
+    products.value[2],
+    products.value[0]
+  ]
+}
 
-  </script>
-  <template>
-  <button @click="reorder">
-    Reorder
-  </button>
-  <DemoVForChild 
-    v-for="product in products" 
-    :product="product" 
-  />
-  </template>
-  ```
+</script>
+<template>
+<button @click="reorder">
+  Reorder
+</button>
+<DemoVForChild 
+  v-for="product in products" 
+  :product="product" 
+/>
+</template>
+```
 
-  #second
+#second
 
-  ```vue
-  <script setup>
-  import { ref } from 'vue'
-  defineProps({
-    product: Object,
-  })
+```vue
+<script setup>
+import { ref } from 'vue'
+defineProps({
+  product: Object,
+})
 
-  const quantity = ref(0)
-  </script>
+const quantity = ref(0)
+</script>
 
-  <template>
-    <div>
-      {{ product.name }}
+<template>
+  <div>
+    {{ product.name }}
 
-      <button
-        @click="quantity++"
-      >
-        Quantity: {{ quantity }}
-      </button>
-    </div>
-  </template>
+    <button
+      @click="quantity++"
+    >
+      Quantity: {{ quantity }}
+    </button>
+  </div>
+</template>
 
-  ```
+```
 
 ::
 
