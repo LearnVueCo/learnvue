@@ -1,13 +1,13 @@
 {
-  "name": "lv-nuxt",
+  "name": "@learnvue/nuxt-demo",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev --port 8086",
-    "dev:https": "nuxt dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem --port 8086",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "build": "nuxi build",
+    "dev": "nuxi dev --port 8086",
+    "dev:https": "nuxi dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem --port 8086",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
   },
   "devDependencies": {
     "@nuxt/content": "2.4.2",
