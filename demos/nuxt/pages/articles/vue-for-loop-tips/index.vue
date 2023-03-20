@@ -9,10 +9,6 @@ const products = ref([
 
 <template>
   <div class="text-highlight">
-    <h2>
-      Simple
-      <pre class="inline">v-for</pre>
-    </h2>
     <div v-for="(product, index) in products" :key="product.id">
       #{{ index + 1 }} - {{ product.name }}
     </div>
