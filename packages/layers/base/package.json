@@ -19,6 +19,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@learnvue/tailwind-preset": "*",
     "@nuxtjs/fontaine": "^0.2.4",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@vueuse/nuxt": "^9.13.0",
