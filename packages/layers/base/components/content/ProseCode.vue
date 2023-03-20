@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useClipboard } from '@vueuse/core'
+
 const props = withDefaults(
   defineProps<{
     code?: string
@@ -10,7 +12,7 @@ const props = withDefaults(
     code: '',
     language: null,
     filename: null,
-    highlights: Array as () => number[],
+    highlights: Array as () => number[]
   }
 )
 
@@ -26,7 +28,7 @@ const copyCode = async () => {
 </script>
 
 <template>
-  <div class="code-wrapper group relative !my-12 border-2 text-base text-white">
+  <div class="code-wrapper group relative border-2 text-base text-white">
     <div
       v-if="filename !== 'HIDE'"
       class="justify-start-end z-20 flex h-10 w-full items-center overflow-hidden bg-charcoal-700 pr-4 text-sm"
@@ -35,7 +37,7 @@ const copyCode = async () => {
         v-if="filename"
         class="flex h-full items-center px-4 text-base"
         :class="{
-          'bg-white bg-opacity-10': filename.includes('.'),
+          'bg-white bg-opacity-10': filename.includes('.')
         }"
       >
         <Icon

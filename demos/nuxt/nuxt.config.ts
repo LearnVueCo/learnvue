@@ -59,7 +59,7 @@ export default defineNuxtConfig({
       baseURL: 'https://a-us.storyblok.com'
     }
   },
-  css: ['@/assets/main.css'],
+
   content: {
     highlight: {
       // Theme used in all color schemes.

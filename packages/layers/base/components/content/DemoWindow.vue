@@ -2,7 +2,7 @@
 const props = withDefaults(
   defineProps<{
     src: string
-    type?: 'nuxt' | 'vue-vite'
+    type?: 'nuxt' | 'vite'
     windowed?: boolean
   }>(),
   {
@@ -10,6 +10,8 @@ const props = withDefaults(
     windowed: true
   }
 )
+
+const colorMode = useColorMode()
 
 const iFrameSrc = computed(() => {
   let basePath = ''
@@ -20,24 +22,22 @@ const iFrameSrc = computed(() => {
       basePath = 'http://localhost:8085'
     }
   } else {
-    basePath = `https://demo.learnvue.co/${props.type}`
+    basePath = `https://demo-${props.type}.learnvue.co/${props.type}`
   }
-  return `${basePath}${props.src}?embed=embed`
+  return `${basePath}${props.src}?embed=embed&mode=${colorMode.preference}`
 })
 </script>
 <template>
   <div class="aspect-video w-full overflow-hidden rounded-xl border-2">
     <div
       v-if="windowed"
-      class="relative z-20 flex h-8 items-center bg-gray-100 pl-2 dark:bg-white dark:bg-opacity-10"
+      class="relative z-20 flex h-8 items-center pl-2 bg-background"
     >
       <div class="absolute left-2 h-2 w-2 rounded-full bg-red-500" />
       <div class="absolute left-5 h-2 w-2 rounded-full bg-yellow-500" />
       <div class="absolute left-8 h-2 w-2 rounded-full bg-green" />
 
-      <div class="relative mx-auto text-sm">
-        {{ 'Live Demo' }}
-      </div>
+      <div class="relative mx-auto text-sm">Demo</div>
     </div>
     <iframe :src="iFrameSrc" class="h-full w-full" />
   </div>

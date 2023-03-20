@@ -1,5 +1,5 @@
 {
-  "name": "learnvue-monorepo",
+  "name": "learnvue",
   "private": true,
   "workspaces": [
     "content",
@@ -7,6 +7,7 @@
     "demos/*"
   ],
   "scripts": {
-    "dev": "turbo dev"
+    "dev": "turbo dev",
+    "build": "turbo build"
   }
 }

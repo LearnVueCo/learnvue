@@ -4,7 +4,8 @@ export default defineNuxtConfig({
     '@vueuse/nuxt',
     'nuxt-icon',
     '@nuxtjs/fontaine',
-    '@nuxt/content'
+    '@nuxt/content',
+    '@nuxtjs/color-mode'
   ],
   components: [
     {

@@ -10,7 +10,9 @@ const localePath = useLocalePath()
   <header class="container flex items-center w-full h-16 py-8 text-sm">
     <NuxtLink :to="localePath('/')" class="flex items-center hover:opacity-80">
       <img src="/logo-dark.svg" class="h-[24px] mr-2" />
-      <span class="text-lg font-extrabold text-white"> Learn</span>
+      <span class="text-lg font-extrabold text-charcoal-900 dark:text-white">
+        Learn</span
+      >
       <span class="mr-2 text-lg font-extrabold text-green">Vue</span>
     </NuxtLink>
     <nav class="ml-4 font-medium">
