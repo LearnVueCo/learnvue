@@ -22,7 +22,7 @@ const iFrameSrc = computed(() => {
       basePath = 'http://localhost:8085'
     }
   } else {
-    basePath = `https://demo-${props.type}.learnvue.co/${props.type}`
+    basePath = `https://demo-${props.type}.learnvue.co`
   }
   return `${basePath}${props.src}?embed=embed&mode=${colorMode.preference}`
 })
