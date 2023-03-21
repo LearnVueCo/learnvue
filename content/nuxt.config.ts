@@ -12,7 +12,6 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       {
-        baseURL: 'lv-content',
         dir: __dirname + '/public'
       }
     ]
