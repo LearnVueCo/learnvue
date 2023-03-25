@@ -20,7 +20,7 @@ const { data, error } = await useAsyncData(
 <template>
   <NuxtLink
     v-if="!error && data"
-    class="custom-block shadow-hover block rounded-lg border-2 p-4 hover:border-green"
+    class="shadow-hover block rounded-lg border-2 p-4 hover:border-green not-prose"
     :to="data._path"
   >
     <h4 class="text-base opacity-60">Related Article:</h4>

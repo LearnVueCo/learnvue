@@ -28,25 +28,25 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="prose-code relative text-base">
+  <div class="prose-code relative text-base not-prose mt-8">
     <div
       class="max-w-calc(100%-32px) absolute top-[2px] left-[2px] z-10 flex h-10 items-center rounded-t-lg"
     >
       <div
         class="absolute h-8 rounded-lg bg-green bg-opacity-20"
         :class="{
-          'transition-all duration-300': dirty,
+          'transition-all duration-300': dirty
         }"
         :style="{
           left: x + 4 + 'px',
-          width: width - 8 + 'px',
+          width: width - 8 + 'px'
         }"
       ></div>
       <button
         ref="first"
         class="flex h-full items-center px-3 font-mono text-white"
         :class="{
-          'opacity-90 transition-opacity hover:opacity-100': selected !== 1,
+          'opacity-90 transition-opacity hover:opacity-100': selected !== 1
         }"
         @click="select(1, $event.currentTarget as HTMLElement)"
       >
@@ -55,7 +55,7 @@ onMounted(() => {
       <button
         class="flex items-center px-3 font-mono text-white"
         :class="{
-          'opacity-90 transition-opacity hover:opacity-100': selected != 2,
+          'opacity-90 transition-opacity hover:opacity-100': selected != 2
         }"
         @click="select(2, $event.currentTarget as HTMLElement)"
       >

@@ -8,7 +8,7 @@ const props = defineProps<{
 const tab = ref(props.openTab ?? 'preview')
 </script>
 <template>
-  <div>
+  <div class="not-prose">
     <div class="flex justify-end">
       <div
         class="rounded-lg inline-flex bg-highlight overflow-hidden border-2 text-sm font-medium"

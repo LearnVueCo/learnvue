@@ -28,7 +28,9 @@ const copyCode = async () => {
 </script>
 
 <template>
-  <div class="code-wrapper group relative border-2 text-base text-white">
+  <div
+    class="code-wrapper group relative border-2 text-base text-white not-prose mt-8"
+  >
     <div
       v-if="filename !== 'HIDE'"
       class="justify-start-end z-20 flex h-10 w-full items-center overflow-hidden bg-charcoal-700 pr-4 text-sm"

@@ -7,14 +7,14 @@ withDefaults(
   }>(),
   {
     icon: 'ri:link',
-    title: undefined,
+    title: undefined
   }
 )
 </script>
 <template>
   <NuxtLink
     :to="src"
-    class="custom-block bg-background mt-4 flex items-center rounded-lg border-2 px-4 pt-4 pb-2 leading-normal hover:border-green"
+    class="not-prose bg-background mt-4 flex items-center rounded-lg border-2 px-4 pt-4 pb-2 leading-normal hover:border-green"
   >
     <Icon :name="icon" class="mr-2 shrink-0 text-2xl" />
     <div class="mb-2">

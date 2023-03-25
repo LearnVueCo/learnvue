@@ -10,7 +10,7 @@ withDefaults(
 </script>
 
 <template>
-  <div class="relative grid grid-cols-2 gap-4 text-base">
+  <div class="relative grid grid-cols-2 gap-4 text-base not-prose">
     <div class="col-span-2 rounded bg-default lg:col-span-1">
       <slot name="code" />
     </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-highlight c-example rounded p-4">
+  <div class="bg-highlight c-example rounded p-4 not-prose">
     <h3 class="mb-4">🏁 Example Output</h3>
     <slot />
   </div>

@@ -30,7 +30,7 @@ function getYouTubeEmbedUrl(videoUrl: string) {
   <div>
     <iframe
       :src="getYouTubeEmbedUrl(url)"
-      class="shadow-hover mx-auto mt-8 aspect-video w-full max-w-lg rounded-lg"
+      class="shadow-hover mx-auto mt-8 aspect-video w-full max-w-lg rounded-lg not-prose"
     />
   </div>
 </template>

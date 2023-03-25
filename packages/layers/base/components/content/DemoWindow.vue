@@ -28,7 +28,9 @@ const iFrameSrc = computed(() => {
 })
 </script>
 <template>
-  <div class="aspect-video w-full overflow-hidden rounded-xl border-2">
+  <div
+    class="aspect-video w-full overflow-hidden rounded-xl border-2 not-prose"
+  >
     <div
       v-if="windowed"
       class="relative z-20 flex h-8 items-center pl-2 bg-background"

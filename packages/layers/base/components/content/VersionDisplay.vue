@@ -18,7 +18,7 @@ const withoutIcon = computed(() => {
 
 <template>
   <div
-    class="custom-block mb-8 flex flex-wrap items-center justify-between gap-8 rounded-lg"
+    class="mb-8 flex flex-wrap items-center justify-between gap-8 rounded-lg not-prose"
   >
     <div
       v-for="tech in withIcon"

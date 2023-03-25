@@ -9,17 +9,17 @@ defineProps<{
 }>()
 </script>
 <template>
-  <div class="demo custom-block w-full rounded-lg py-8 px-8">
-    <header v-if="header" class="py-12">
-      <h2 class="mb-4 text-center text-3xl">
+  <div class="demo w-full rounded-lg my-24 not-prose">
+    <header v-if="header">
+      <h2 class="text-center text-3xl">
         {{ header }}
       </h2>
-      <p v-if="subheader" class="text-center">
+      <p v-if="subheader" class="text-center mt-4">
         {{ subheader }}
       </p>
     </header>
     <div
-      class="shadow-default-xl bg-default mx-8 overflow-hidden rounded-lg border-2"
+      class="shadow-default-xl bg-default mx-8 overflow-hidden rounded-lg border-2 mt-12"
     >
       <div
         class="relative z-20 flex h-8 items-center bg-gray-100 pl-2 dark:bg-white dark:bg-opacity-10"
