@@ -157,16 +157,7 @@ Then, so we can really see what’s going on, let’s print out history inside o
 
 Okay – let’s run it. As we type, every character triggers a new entry in our history array, and if we click undo/redo, we’ll go to the corresponding entry.
 
-::demo-wrapper
----
-
-demo: DemoUseRefHistory
-header: Try it! Start typing
-subheader: We can see every time our reactive value changes
-browserTitle: useRefHistory Demo
-
----
-::
+:demo-window{src="/articles/vueuse-utilities/userefhistory" type="nuxt"}
 
 There are also different options that add even more functionality to this function. For example, we can track reactive objects deeply and limit the number of history entries like this.
 
@@ -247,16 +238,7 @@ Here’s a simple component with a popup window using `onClickOutside`.
 
 The result is like this, where we can open the popup with our button, and then close it by clicking outside the popup-content window.
 
-::demo-wrapper
----
-
-demo: DemoOnClickOutside
-header: It's that easy.
-subheader: Open the modal and click around
-browserTitle: onClickOutside Demo
----
-
-::
+:demo-window{src="/articles/vueuse-utilities/onclickoutside" type="nuxt"}
 
 ## `useVModel`
 

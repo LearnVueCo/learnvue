@@ -11,7 +11,7 @@ const count = ref(0)
     >
       Parent.vue
     </div>
-    <DemoEmitBasicChild @add="(i) => (count += i)" />
+    <BasicChild @add="(i) => (count += i)" />
     <p>Count: {{ count }}</p>
   </div>
 </template>

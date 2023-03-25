@@ -10,7 +10,7 @@ onClickOutside(popup, () => {
 </script>
 
 <template>
-  <div class="relative h-full p-8">
+  <div class="absolute top-0 left-0 h-full p-8 w-full">
     <button @click="open = true">Open Popup</button>
     <div v-if="open" class="popup">
       <div ref="popup" class="popup-content">
@@ -42,12 +42,12 @@ button {
   align-items: center;
   justify-content: center;
   background: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
 }
 .popup-content {
   min-width: 300px;
   padding: 20px;
-  width: 30%;
-  background: #fff;
+  background: white;
   color: black;
 }
 </style>

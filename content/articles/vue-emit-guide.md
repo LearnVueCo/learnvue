@@ -69,17 +69,7 @@ const count = ref(0)
 
 ::
 
-::demo-wrapper
----
-
-demo: DemoEmitBasic
-browserTitle: Inline Emit Demo
-size: lg
-header: Start clicking ⬇️
-subheader: We can send data up from Child.vue
----
-
-::
+:demo-window{src="/articles/vue-emit-guide/basic" type="nuxt"}
 
 Every time we click our button, `Child.vue` emits an event called `add` with a random value between 0 and 1. Then, `Parent.vue` captures this event and adds that value to `count`
 
@@ -165,17 +155,7 @@ sLang: vue
 
 ::
 
-::demo-wrapper
----
-
-demo: DemoEmitIntermediate
-browserTitle: Options API Demo
-size: lg
-header: Try it out
-subheader: Type around and emit events
----
-
-::
+:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
 
 While this is a simple example, bringing this logic outside of our component gives us **easier access** to other properties in our data and helps keep our logic organized in larger files.
 
@@ -222,17 +202,7 @@ We can call `context.emit` with the same event name and values that we used befo
 
 ```
 
-::demo-wrapper
----
-
-demo: DemoEmitIntermediate
-browserTitle: Composition API Demo
-size: lg
-header: Try it out
-subheader: Works the same, but Composition API 😉
----
-
-::
+:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
 
 ## Usage in `<script setup>`
 
@@ -258,16 +228,7 @@ const handleChange = (event) => {
 </script>
 ```
 
-::demo-wrapper
----
-
-demo: DemoEmitIntermediate
-browserTitle: <script setup> Demo
-size: lg
-header: Still works!
----
-
-::
+:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
 
 However, if we pass an object, we can add a validator function for each event that lets us check we're emitting events with proper values.
 

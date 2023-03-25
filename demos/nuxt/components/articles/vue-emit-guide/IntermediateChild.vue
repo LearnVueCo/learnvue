@@ -7,5 +7,5 @@ const handleChange = (event: Event) => {
 </script>
 
 <template>
-  <input type="text" @input="handleChange" />
+  <input type="text" @input="handleChange" class="border-2 p-2 rounded" />
 </template>
