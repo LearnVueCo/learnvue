@@ -1,7 +1,7 @@
 {
   "name": "@learnvue/tailwind-preset",
   "type": "module",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "",
   "author": "Matt Maribojoc <matt@learnvue.co>",
   "license": "MIT",
