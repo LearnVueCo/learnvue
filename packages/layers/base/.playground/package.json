@@ -1,0 +1,17 @@
+{
+  "name": "lv-base-theme-playground",
+  "private": true,
+  "type": "module",
+  "license": "MIT",
+  "main": "./nuxt.config.ts",
+  "scripts": {
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "generate": "nuxi generate",
+    "preview": "nuxi preview"
+  },
+  "devDependencies": {
+    "@learnvue/theme": "latest",
+    "nuxt": "latest"
+  }
+}

@@ -11,19 +11,22 @@
     "components",
     "composables",
     "nuxt.config.ts",
-    "tailwind.config.ts"
+    "tailwind.config.ts",
+    "utils"
   ],
   "scripts": {
     "build": "nuxt build .playground",
     "dev": "nuxi dev .playground",
-    "lint": "eslint ."
+    "prepare": "nuxi prepare && nuxi prepare .playground",
+    "release": "release-it"
   },
   "dependencies": {
     "@learnvue/tailwind-preset": "*",
     "@nuxtjs/fontaine": "^0.2.4",
     "@nuxtjs/tailwindcss": "^6.6.0",
     "@vueuse/nuxt": "^9.13.0",
-    "nuxt-icon": "^0.3.3"
+    "nuxt-icon": "^0.3.3",
+    "zod": "^3.21.4"
   },
   "devDependencies": {
     "@nuxt/content": "^2.5.2",

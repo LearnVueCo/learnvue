@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { LvContent } from '~~/types/content'
+import { Content } from '~~/utils/content'
 
 const props = defineProps<{
   slug: string
@@ -8,9 +8,7 @@ const props = defineProps<{
 const { data, error } = await useAsyncData(
   `article-callout-${props.slug}`,
   () => {
-    return queryContent<LvContent>(props.slug)
-      .without('body, excerpt')
-      .findOne()
+    return queryContent<Content>(props.slug).without('body, excerpt').findOne()
   }
 )
 

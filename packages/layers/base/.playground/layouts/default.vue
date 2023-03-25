@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { useDark, useToggle } from '@vueuse/core'
-
 const isDark = useDark()
 const toggleDark = useToggle(isDark)
 
@@ -13,6 +12,8 @@ function getFrontmatter(doc: any) {
       })
   )
 }
+
+const t = useState('test', () => 0)
 </script>
 <template>
   <div class="p-16 text-default bg-default">

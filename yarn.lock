@@ -1081,22 +1081,21 @@
   resolved "https://registry.npmjs.org/@nuxt/devalue/-/devalue-2.0.0.tgz"
   integrity sha512-YBI/6o2EBz02tdEJRBK8xkt3zvOFOWlLBf7WKYGBsSYSRtjjgrqPe2skp6VLLmKx5WbHHDNcW+6oACaurxGzeA==
 
-"@nuxt/devtools-kit@npm:@nuxt/devtools-kit-edge@0.2.5-27987214.aeff685":
-  version "0.2.5-27987214.aeff685"
-  resolved "https://registry.npmjs.org/@nuxt/devtools-kit-edge/-/devtools-kit-edge-0.2.5-27987214.aeff685.tgz"
-  integrity sha512-yTSc7hdxB68qy448UdjbhpU1nZMsy4jIPejHeKoRZD9BvVdV0WUnn46EfMGTXuHel77PPHHuiXb0ODuhChPMmw==
+"@nuxt/devtools-kit@npm:@nuxt/devtools-kit-edge@0.2.5-27994283.f736291":
+  version "0.2.5-27994283.f736291"
+  resolved "https://registry.npmjs.org/@nuxt/devtools-kit-edge/-/devtools-kit-edge-0.2.5-27994283.f736291.tgz"
+  integrity sha512-9mRimi9Qcx7hQ4Zff2lYJVWRzRLNhv+Xl/5YeH8KYbVxWcy3Qud2hC3GTmEQrXBIGlMenaDXAUU5FRx3dVtlCQ==
   dependencies:
     "@nuxt/kit" "^3.3.1"
     "@nuxt/schema" "^3.3.1"
     execa "^7.1.1"
 
 "@nuxt/devtools@npm:@nuxt/devtools-edge@latest":
-  version "0.2.5-27987214.aeff685"
-  resolved "https://registry.npmjs.org/@nuxt/devtools-edge/-/devtools-edge-0.2.5-27987214.aeff685.tgz"
-  integrity sha512-WK9J759bvXDRZwD0ZmIsolwBpKepdiDpg1T4Tu7lQL1dcx14DoKlTpVXERVDxmVnD9HV74v0WUa+S4CSTUyStA==
+  version "0.2.5-27994283.f736291"
+  resolved "https://registry.npmjs.org/@nuxt/devtools-edge/-/devtools-edge-0.2.5-27994283.f736291.tgz"
+  integrity sha512-MxHAwtKKvUpUR7pUURRbNiT1QqGOSkD6HIyU+Rs8/tbNyD+Fb15rvpfh/HdR2aQmG/3wDFqBiXIrIckacFcVpg==
   dependencies:
-    "@antfu/install-pkg" "^0.1.1"
-    "@nuxt/devtools-kit" "npm:@nuxt/devtools-kit-edge@0.2.5-27987214.aeff685"
+    "@nuxt/devtools-kit" "npm:@nuxt/devtools-kit-edge@0.2.5-27994283.f736291"
     "@nuxt/kit" "^3.3.1"
     birpc "^0.2.10"
     consola "^2.15.3"
@@ -1107,12 +1106,13 @@
     image-meta "^0.1.1"
     is-installed-globally "^0.4.0"
     launch-editor "^2.6.0"
+    local-pkg "^0.4.3"
     pacote "^15.1.1"
     pathe "^1.1.0"
     pkg-types "^1.0.2"
     rc9 "^2.0.1"
     unimport "^3.0.3"
-    vite-plugin-inspect "^0.7.17"
+    vite-plugin-inspect "^0.7.18"
     vite-plugin-vue-inspector "^3.4.0"
 
 "@nuxt/eslint-config@^0.1.1":
@@ -11272,10 +11272,10 @@ vite-plugin-checker@^0.5.6:
     vscode-languageserver-textdocument "^1.0.1"
     vscode-uri "^3.0.2"
 
-vite-plugin-inspect@^0.7.17:
-  version "0.7.17"
-  resolved "https://registry.npmjs.org/vite-plugin-inspect/-/vite-plugin-inspect-0.7.17.tgz"
-  integrity sha512-0z33Z7ap6DOzOO3iulGROWZq9oUbarmMKHtdVbCMJ3OL0JOd8UvEqnTazU/2Y8Y2WpOyaZuEV6USJ9KHoZ7f+A==
+vite-plugin-inspect@^0.7.18:
+  version "0.7.18"
+  resolved "https://registry.npmjs.org/vite-plugin-inspect/-/vite-plugin-inspect-0.7.18.tgz"
+  integrity sha512-hyIxg2qJaRs0LoB3Tqy9ML8yEublIzTzFVXmNhgw2jsjETJUXeR6iQ4YPHk3Q6kTbbiwgoPPyXimlAfEwektnA==
   dependencies:
     "@antfu/utils" "^0.7.2"
     "@rollup/pluginutils" "^5.0.2"
@@ -11853,6 +11853,11 @@ zip-stream@^4.1.0:
     archiver-utils "^2.1.0"
     compress-commons "^4.1.0"
     readable-stream "^3.6.0"
+
+zod@^3.21.4:
+  version "3.21.4"
+  resolved "https://registry.npmjs.org/zod/-/zod-3.21.4.tgz#10882231d992519f0a10b5dd58a38c9dabbb64db"
+  integrity sha512-m46AKbrzKVzOzs/DZgVnG5H55N1sv1M8qZU3A8RIKbs3mrACDNeIOeilDymVb2HdmP8uwshOCF4uJ8uM9rCqJw==
 
 zwitch@^2.0.0:
   version "2.0.4"
