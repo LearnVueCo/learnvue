@@ -10,7 +10,7 @@ cover: articles/lazy-load-components
 ---
 Using Vue 3’s `defineAsyncComponent` feature lets us lazy load components. This means that they’re only loaded from the server when they’re needed.
 
-This is a great way to**improve initial page loads** as our app will be loaded in smaller chunks rather than having to load every single component when the page loads.
+This is a great way to **improve initial page loads** as our app will be loaded in smaller chunks rather than having to load every single component when the page loads.
 
 ![](https://www.imperva.com/learn/wp-content/uploads/sites/13/2019/01/Lazy-Loading-2.jpg)
 
