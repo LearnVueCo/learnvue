@@ -7,6 +7,7 @@
   },
   "type": "module",
   "main": "./nuxt.config.ts",
+  "license": "MIT",
   "files": [
     "components",
     "composables",
@@ -33,6 +34,7 @@
     "@nuxt/eslint-config": "^0.1.1",
     "@release-it-plugins/lerna-changelog": "^5.0.0",
     "@types/node": "^18.15.3",
+    "auto-changelog": "^2.4.0",
     "eslint": "^8.28.0",
     "nuxt": "^3.0.0",
     "release-it": "^15.5.0",
@@ -46,11 +48,15 @@
       "access": "public"
     },
     "git": {
-      "commitMessage": "chore(release)[layer/base]: release v${version}"
+      "commitMessage": "chore(release)[layer/base]: release v${version}",
+      "changelog": "npx auto-changelog --stdout --commit-limit false -u --template https://raw.githubusercontent.com/release-it/release-it/main/templates/changelog-compact.hbs"
     },
     "github": {
-      "release": true,
-      "releaseName": "v${version}"
+      "release": false,
+      "tag": false
+    },
+    "hooks": {
+      "after:bump": "npx auto-changelog -p"
     }
   }
 }
