@@ -1,3 +1,14 @@
+<script setup>
+import { ref } from 'vue'
+
+const open = ref(false) // state of our popup
+const popup = ref() // template ref
+// whenever our popup exists, and we click anything BUT it
+onClickOutside(popup, () => {
+  open.value = false
+})
+</script>
+
 <template>
   <div class="relative h-full p-8">
     <button @click="open = true">Open Popup</button>
@@ -11,17 +22,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import { ref } from 'vue'
-
-const open = ref(false) // state of our popup
-const popup = ref() // template ref
-// whenever our popup exists, and we click anything BUT it
-onClickOutside(popup, () => {
-  open.value = false
-})
-</script>
 
 <style scoped>
 button {
