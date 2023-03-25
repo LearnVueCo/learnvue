@@ -1,0 +1,14 @@
+name: Deploy Main Site
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - content/**
+jobs:
+  call-deploy-hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: REST API with curl
+        run: |
+          curl -X POST ${{ secrets.DEPLOY_HOOK }}
