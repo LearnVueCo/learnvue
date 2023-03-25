@@ -14,7 +14,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { onClickOutside } from '@vueuse/core'
+
 const open = ref(false) // state of our popup
 const popup = ref() // template ref
 // whenever our popup exists, and we click anything BUT it

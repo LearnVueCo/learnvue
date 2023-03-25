@@ -11,5 +11,8 @@
     "@vueuse/nuxt": "^9.13.0",
     "pathe": "^1.1.0",
     "url": "^0.11.0"
+  },
+  "scripts": {
+    "prepare": "npx nuxi prepare"
   }
 }
