@@ -2444,7 +2444,7 @@
 
 "@vueuse/nuxt@^9.13.0":
   version "9.13.0"
-  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-9.13.0.tgz"
+  resolved "https://registry.npmjs.org/@vueuse/nuxt/-/nuxt-9.13.0.tgz#32bc95df0fb0e54aa60379ef009c6985e8f50be1"
   integrity sha512-JunH/w6nFIwCyaZ0s+pfrYFMfBzGfhkwmFPz7ogHFmb71Ty/5HINrYOAOZCXpN44X6QH6FiJq/wuLLdvYzqFUw==
   dependencies:
     "@nuxt/kit" "^3.2.0"
