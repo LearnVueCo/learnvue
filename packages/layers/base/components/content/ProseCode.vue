@@ -33,18 +33,12 @@ const copyCode = async () => {
   >
     <div
       v-if="filename !== 'HIDE'"
-      class="justify-start-end z-20 flex h-10 w-full items-center overflow-hidden bg-charcoal-700 pr-4 text-sm"
+      class="justify-start-end z-20 flex h-10 w-full items-center overflow-hidden bg-charcoal-700 pr-4 text-sm font-sans font-medium"
     >
-      <div
-        v-if="filename"
-        class="flex h-full items-center px-4 text-base"
-        :class="{
-          'bg-white bg-opacity-10': filename.includes('.')
-        }"
-      >
+      <div v-if="filename" class="flex h-full items-center px-4">
         <Icon
           v-if="filename.includes('.')"
-          class="mr-2 text-xl text-white"
+          class="mr-2 text-lg text-white"
           :name="
             language === 'js' || language === 'javascript'
               ? 'logos:javascript'

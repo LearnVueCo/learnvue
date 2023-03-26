@@ -1,5 +1,7 @@
 <template>
-  <div class="text-highlight mb-8 rounded-lg border-2 border-green p-4">
+  <div
+    class="text-highlight mb-8 rounded-lg border-2 border-green p-4 not-prose"
+  >
     <slot />
   </div>
 </template>

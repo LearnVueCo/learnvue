@@ -44,7 +44,7 @@ onMounted(() => {
       ></div>
       <button
         ref="first"
-        class="flex h-full items-center px-3 font-mono text-white"
+        class="flex h-full items-center px-3 font-sans font-medium text-sm text-white"
         :class="{
           'opacity-90 transition-opacity hover:opacity-100': selected !== 1
         }"
@@ -53,7 +53,7 @@ onMounted(() => {
         {{ fFilename }}
       </button>
       <button
-        class="flex items-center px-3 font-mono text-white"
+        class="flex items-center px-3 font-sans font-medium text-sm text-white"
         :class="{
           'opacity-90 transition-opacity hover:opacity-100': selected != 2
         }"
