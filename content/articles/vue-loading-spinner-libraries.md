@@ -8,9 +8,19 @@ category: UI Design
 cover: articles/vue-loading-spinner-libraries
 ---
 
+::block-warning
+This article may be outdated and contains links to Vue 2 libraries. 
+::
+
 **Nobody likes waiting** for things to load. Just look at Google’s 2017 data finding a correlation load times and bounce rates.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/6-vue-loader-animation-libraries-to-reduce-your-bounce-rate-1.png)
+::captioned-image
+#img
+![](/img/articles/vue-loading-spinner-libraries/google-data.png)
+
+#caption
+Google’s 2017 data finding a correlation load times and bounce rates ([source: thinkwithgoogle.com](https://www.thinkwithgoogle.com/marketing-strategies/app-and-mobile/page-load-time-statistics/)).
+::
 
 One way to keep people from leaving your website is to add visual feedback so that they know things are just loading and not broken. It also attracts people’s attention so the wait time seems much shorter than it would with a static screen.
 
