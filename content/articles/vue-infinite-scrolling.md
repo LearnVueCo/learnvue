@@ -18,15 +18,20 @@ They are highly effective for specific types of content such as user-generated c
 
 Here’s an example of what infinite scrolling is.
 
-![](https://addyosmani.com/assets/images/infinite-scroll.png)
+::captioned-image
+#img
+![A comparison of pagination, infinite scroll, and load more interactions to load content](https://addyosmani.com/assets/images/infinite-scroll.png)
 
-[Source: Addy Osmani](https://addyosmani.com/blog/infinite-scroll-without-layout-shifts/){.image-caption}
+#caption
+[Source: Addy Osmani](https://addyosmani.com/blog/infinite-scroll-without-layout-shifts/)
+::
+
 
 In this tutorial, we’ll be creating a Vue 3 Infinite Scrolling Component using the [Composition API](https://learnvue.co/2020/01/4-Vue-3-composition-api-tips-you-should-know/).
 
 Here’s a sneak peek of what we’ll be building by the end of it. As you can see, it scrolls indefinitely and the scrollbar on the right side of the screen reflects this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-quick-vue3-infinite-scrolling-component-daily-vue-tips-4-2.png)
+![A feed of fake social media posts that loads more when scrolling down](/img/articles/vue-infinite-scrolling/demo.gif)
 
 Okay – let’s jump right in.
 
@@ -180,7 +185,7 @@ Finally, to display our data inside our template, we want to run a `v-for` loop 
 
 Our current page should render 10 posts and look like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-quick-vue3-infinite-scrolling-component-daily-vue-tips-4-3.png)
+![A static feed of fake social media posts](/img/articles/vue-infinite-scrolling/still.png)
 
 But if we scroll to the bottom, nothing happens. So let’s move on to the exciting part: infinite scrolling!
 
@@ -259,7 +264,7 @@ const handleScroll = (e) => {
 
 And that’s it! When we scroll down to the bottom of our current posts, new posts should automatically load in. Let’s take a look at what we have.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-quick-vue3-infinite-scrolling-component-daily-vue-tips-4-4.png)
+![A feed of fake social media posts that loads more when scrolling down](/img/articles/vue-infinite-scrolling/demo.gif)
 
 Perfect!
 
