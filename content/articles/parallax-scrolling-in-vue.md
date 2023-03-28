@@ -13,7 +13,7 @@ Recently, I was inspired by this Webflow example of parallax scrolling, and want
 
 This is what I came up with.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-beautiful-parallax-scrolling-effect-in-vuejs-daily-vue-tips-2-1.gif)
+![A parallax scrolling effect with a forest with a foreground and background, scrolling down reveals a new block of Lorem Ipsum text](/img/articles/parallax-scrolling-in-vue/final-effect.gif)
 
 By the end of this tutorial, you’ll know how to set up this parallax scrolling effect in Vue, and be well on your way to implementing this in your own projects with your own images.
 
@@ -71,11 +71,11 @@ These are the two images that we will be using.
 
 Background (Credit: [Unsplash](https://unsplash.com/photos/mERlBKFGJiQ))
 
-![](https://images.unsplash.com/photo-1509599589979-3b5a15d2816e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)
+![A dark forest with several tall trees](/img/articles/parallax-scrolling-in-vue/background.jpeg)
 
 Foreground (Credit: [Creative Plannet](http://creativeplannet.blogspot.com/2011/07/creative-page-borders.html))
 
-![](https://3.bp.blogspot.com/-gTf6EpGgHbs/TiswK4aeDlI/AAAAAAAAAKs/c6lOK9Ipigk/s400/creative+page+borders-10.png)
+![Foreground of trees bordering a transparent center](/img/articles/parallax-scrolling-in-vue/foreground.png)
 
 ## Styling our components
 
@@ -159,7 +159,7 @@ The rest is pretty self-explanatory and were just the properties that I thought 
 
 Now at this point, this is what we should see.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-beautiful-parallax-scrolling-effect-in-vuejs-daily-vue-tips-2-4.png)
+![Still image with background, foreground, and text saying "Parallax Scrolling"](/img/articles/parallax-scrolling-in-vue/composite.png)
 
 Our page looks put together, but if we scroll nothing happens and our Section #2 never becomes visible.
 
@@ -231,7 +231,7 @@ const handleScroll = (evt) => {
 
 And that’s it for our parallax effect, here’s what our app should look like as we scroll down.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-beautiful-parallax-scrolling-effect-in-vuejs-daily-vue-tips-2-5.gif)
+![A parallax scrolling effect with a forest with a foreground and background, scrolling down reveals a new block of Lorem Ipsum text](/img/articles/parallax-scrolling-in-vue/final-effect.gif)
 
 There’s so many different extensions you could add on this project – more sections, more layers, different effects. As long as you understand how to make your styles respond to the scroll position, the possibilities are endless.
 
