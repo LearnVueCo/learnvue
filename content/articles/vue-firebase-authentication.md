@@ -51,17 +51,17 @@ We’ll be setting up the rest of our app including multiple pages in a little b
 
 Inside our browser, let’s navigate to the [Firebase Console](https://console.firebase.google.com/u/0/) and give our project a name.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-3.png)
+![New project page in the Firebase Console](/img/articles/vue-firebase-authentication/firebase-console-name-project.png)
 
 On the next slide, it doesn’t really matter whether or not we choose to add Google Analytics. For this tutorial, it’s not necessary so I’m not going to.
 
 After the project is created, let’s create a Firebase web app by clicking this button.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-4.png)
+![Firebase dashboard with an arrow pointing to the create web app button, which contains a code icon](/img/articles/vue-firebase-authentication/firebase-console-create-web-app.png
 
 Once we give our project a name, we are given a block of code. The highlighted section will come in handy later, so try to keep this page open. But if you accidentally close it, you can always find your way back to it from your project settings.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-5.png)
+![Code snippet in Firebase console with project configuration settings for Javascript](/img/articles/vue-firebase-authentication/firebase-console-config.png)
 
 And that’s all the setup we have to do for now to create our Firebase project.
 
@@ -136,7 +136,7 @@ app.mount("#app");
 
 That’s it.
 
-For the second step, we have to open up `App.vue` and replace our template code with a `&lt;router-view&gt;` element. And this renders whatever component the router resolves to – meaning that it will **change based on the current path in the URL.**
+For the second step, we have to open up `App.vue` and replace our template code with a `<router-view>` element. And this renders whatever component the router resolves to – meaning that it will **change based on the current path in the URL.**
 
 ```vue{}[App.vue]
 <template>
@@ -148,7 +148,7 @@ Awesome, now if we navigate any of the routes we declared, we’ll see the corre
 
 ## Creating a Navigation Bar
 
-To make it easy for us to get around the different pages of our app, let’s add some different links to our App.vue file. For this, we’ll use the `&lt;router-link&gt;` element of Vue Router.
+To make it easy for us to get around the different pages of our app, let’s add some different links to our App.vue file. For this, we’ll use the `<router-link>` element of Vue Router.
 
 Since our `App.vue` file contains our router view, this navigation section will be available across all the different pages of our app.
 
@@ -168,7 +168,7 @@ Since our `App.vue` file contains our router view, this navigation section will 
 
 And this is the result. It’s not the prettiest, but it has all the functionality we need for this example. We can click around and access our different pages.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-7.png)
+![App with navigation with Home, Feed, Register, and Login Tabs. The Home Page is the current page.](/img/articles/vue-firebase-authentication/app-1.png)
 
 One thing to note is that since we haven’t set up authentication, we can **access our feed page before we even log in!**
 
@@ -220,7 +220,7 @@ Firebase gives us [several different options for user authentication](https://fi
 
 So in our Firebase console, let’s navigate to the authentication tab and make sure that the email/password option is enabled.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-8.png)
+![Firebase Console Authentication Settings with Email Enabled](/img/articles/vue-firebase-authentication/firebase-console-authentication.png)
 
 Okay – now we’re ready to create our first user.
 
@@ -293,7 +293,7 @@ If we type a valid **email address and a password at least 6 characters long**, 
 
 And if we go to our Firebase console, we should see our new account in our database!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-10.png)
+![Firebase Authentication Table with one added user.](/img/articles/vue-firebase-authentication/firebase-console-auth-user.png)
 
 Exciting!!
 
@@ -460,7 +460,7 @@ For now, when our button is clicked, we just want to call our `signOut` method.
 
 As soon as we hit sign out, we are no longer logged in. This also means that our conditional rendered content in our navbar will all change to the logged-out state.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-12.png)
+![App screen that switches from Logout State to Login State when logout button is pressed.](/img/articles/vue-firebase-authentication/app-logout.gif)
 
 ### Verifying Logged In Status
 
@@ -500,13 +500,13 @@ We also want to make sure to remove our `authListener` whenever our component is
 
 Alright – let’s see this in action. Let’s make sure that we’re logged out and try to access our feed page.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-13.png)
+![App in a logged out state. Clicking "feed" causes an alert saying that we don't have access to the page](/img/articles/vue-firebase-authentication/protected-route.gif
 
 Now, if we log in and go back to `/feed`, it will load properly because we actually have a logged in user object exists!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-vue-firebase-authentication-tutorial-vue-3-and-firebase-14.png)
+![User logging into an app. After the login, it navigates to the feed page.](/img/articles/vue-firebase-authentication/logged-in.gif)
 
-Awesome. The fact that Firebase authentication comes with this**persistent user data built-in** makes it super easy for us to manage sessions.
+Awesome. The fact that Firebase authentication comes with this **persistent user data built-in** makes it super easy for us to manage sessions.
 
 We can also use this logged-in status to only display the navigation link to the Feed when the user is logged in using the same `isLoggedIn` data property.
 
@@ -522,9 +522,9 @@ Now, our router-link for the `/feed` page will conditionally render depending on
 
 Of course, this is only really the beginning of the possibilities that can be added to a Vue Firebase Authentication system. But just by understanding these core concepts, you can build the foundation for an integrated frontend/backend system.
 
-One extension that you would have to add for production apps is adding **validation** to the registration forms. On the backend, Firebase throws an error if we pass an invalid email or an insecure password, but with frontend v[alidation with Vuelidate](https://learnvue.co/2020/01/getting-smart-with-vue-form-validation-vuelidate-tutorial/), we can catch these problems before we even make our API call.
+One extension that you would have to add for production apps is adding **validation** to the registration forms. On the backend, Firebase throws an error if we pass an invalid email or an insecure password, but with frontend [validation with Vuelidate](https://learnvue.co/2020/01/getting-smart-with-vue-form-validation-vuelidate-tutorial/), we can catch these problems before we even make our API call.
 
-We can also set our own**password rules** – requiring special characters, numbers, and really whatever kind of custom validations.
+We can also set our own **password rules** – requiring special characters, numbers, and really whatever kind of custom validations.
 
 If you’re new to Vuelidate, check out our video explaining how to use it in Vue 3!
 
