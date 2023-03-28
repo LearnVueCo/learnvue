@@ -64,7 +64,9 @@ export default {
 
 Whenever our title value changes, we can see the following printed out in the console.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-simple-vue-watcher-tutorial-for-beginners-1.png)
+```
+Title changed from Version Vue 2 to Version Vue 3
+```
 
 Simple right!
 
@@ -116,7 +118,10 @@ export default {
 
 So, right when our component is initialized, our watchEffect will run and log the starting value. Then, whenever the value of `userID` changes, our watchEffect will be triggered.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/a-simple-vue-watcher-tutorial-for-beginners-2.png)
+```
+Value: 0
+Value: 1
+```
 
 Easy enough, right?
 
