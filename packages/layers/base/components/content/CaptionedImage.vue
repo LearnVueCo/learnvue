@@ -13,6 +13,6 @@
 }
 
 :slotted(:deep(a)) {
-  @apply underline hover:text-highlight !important;
+  @apply underline hover:text-charcoal-900 dark:hover:text-white !important;
 }
 </style>
