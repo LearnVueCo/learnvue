@@ -69,7 +69,7 @@ Next, let’s add a `<p>` element with a class of `error-message` under our pass
 
 Alright, if we run our Vue app, we should see something like this in the browser.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/v-if-vs-v-show-vue-conditional-rendering-1.png)
+![](/img/articles/v-if-vs-v-show/1.png)
 
 So now, we can use **conditional rendering** to only show this error message when our password has a length less than 6.
 
@@ -93,7 +93,7 @@ For this example, we’ll use the `v-if`directive, so on our `<p>` tag, we can j
 
 Awesome! Our error message now renders at the right times!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/v-if-vs-v-show-vue-conditional-rendering-2.gif)
+![](/img/articles/v-if-vs-v-show/2.gif)
 
 Back in our code, we can change `v-if` to `v-show` and if we’ll see that our app appears to function exactly the same.
 
@@ -145,11 +145,11 @@ export default {
 
 When our elements are displayed, the DOM looks like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/v-if-vs-v-show-vue-conditional-rendering-3.png)
+![](/img/articles/v-if-vs-v-show/3.png)
 
 And when we press the button, the DOM looks like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/v-if-vs-v-show-vue-conditional-rendering-4.png)
+![](/img/articles/v-if-vs-v-show/4.png)
 
 As you can see, with `v-if`, the conditional block is completely removed from the DOM. But with `v-show`, it’s `display` is set to `none`.
 
