@@ -77,7 +77,7 @@ So let’s say we have this example template with some reactive data, a paragrap
 
 When we click our button, we can see that even though the value of msg changes, the paragraph does not change thanks to v-once.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/improve-vue-performance-with-v-once-and-v-memo-image-1.png)
+![](/img/articles/v-once-v-memo/1.png)
 
 When used with v-if or v-show, once our element is rendered once, the v-if or v-show will no longer apply meaning that if it’s visible on the first render, **it will always be visible**. And if it’s hidden, **it will always be hidden**.
 
@@ -102,7 +102,7 @@ const show = ref(false)
 </template>
 ```
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/improve-vue-performance-with-v-once-and-v-memo-image-2.png)
+![](/img/articles/v-once-v-memo/2.png)
 
 ### When would I use v-once?
 
@@ -167,7 +167,7 @@ const likes = ref(3000)
 
 If we modify the other pieces of component data, our div will not re-render, but as soon as we update the value of subscribers…BAM! There’s the render.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/improve-vue-performance-with-v-once-and-v-memo-image-3.gif)
+![](/img/articles/v-once-v-memo/3.gif)
 
 Pretty handy if we need to control exactly when a large component re-renders.
 
