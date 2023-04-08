@@ -28,8 +28,6 @@ It’s custom directive time!
 
 Essentially, custom directives are a way to make your project fit your needs. If you use Vue plugins, you’ll notice that they use custom directives pretty frequently.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/creating-your-first-vuejs-custom-directive-1.com/N5hrjFmFXs34C1q5UGIT7J2aSA07k1ZVNVhHYlqK-Ux2lEM0VmZ8Lmd6UEEPunCg-O0orQHTtQSejM5UYAiX6J4ScLv8VzgPfGqBKFO1-sshWgcbVQNVdbNNcyk_Dwy12v32CLhY)
-
 For example, in the [v-lazy plugin](https://github.com/hilongjw/vue-lazyload), they use the directive v-lazy to add custom functionality that makes image loading more effective. Using a directive is the best case here because we want to directly edit the DOM.
 
 You may be asking, “_Can’t I just register component options like computed and watchers?_“
@@ -132,10 +130,6 @@ app.directive("font-size", (el, binding) => {
 
 **If a function is passed instead of an object, then it will run during the bind and update hooks.**
 
-No matter which method you used, the result should look something like this.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/creating-your-first-vuejs-custom-directive-2.png)
-
 We have our first custom directive working! Now, let’s make this a little more advanced.
 
 ## Passing arguments to your directive
@@ -197,8 +191,6 @@ And then in our template.
 <p v-font-size:large>Large</p>
 ```
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/creating-your-first-vuejs-custom-directive-3.png)
-
 ### Using modifiers
 
 Modifiers are similar to arguments in that they’re not geared for reactivity. But when used in combination with arguments, you can create an extremely customized system.
@@ -234,10 +226,6 @@ And then we can use them in our template
 <p v-font-size.medium>Medium</p>
 <p v-font-size.large>Large</p>
 ```
-
-The output should all three should look something like this.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/creating-your-first-vuejs-custom-directive-4.png)
 
 ## Conclusion
 

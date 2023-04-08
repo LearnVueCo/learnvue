@@ -45,10 +45,6 @@ The issue is that if you have hundreds of lines in a single component, you would
 
 This means that code for just one feature could be spread out hundreds of lines apart and in several different places – making it hard to read or debug.
 
-Here’s just one example from the [Vue Composition API RFC](https://vue-composition-api-rfc.netlify.com/)showing how code can be organized by feature now.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/extract-and-reuse-logic-in-the-vue-composition-api-1.png){.max-w-md}
-
 Now, here is the equivalent code using the new Composition API.
 
 ```js
