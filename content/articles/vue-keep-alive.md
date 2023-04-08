@@ -113,7 +113,7 @@ Keeping it short, this component has two buttons that switch what the dynamic co
 
 Now, if you run your App you should see something like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-overview-of-vue-keep-alive-1.com/e0ooITPaJOJobJr57deKcrhAhZmTwfPUW30ctJoiNxqo-orMJaDRzg-VA85l5I4UmypLPOVB5Ru4t9WIpX4W9hczGC27Um865UaiIlOB871-Ay91_DiB8hBoF3F89NO-5dVPd8AH)
+![About and Contact Tabs with the active tab being About](/img/articles/vue-keep-alive/starting.png)
 
 Simple, I know, but it gets the point across.
 
@@ -121,13 +121,13 @@ When switching between components, you should notice a few things:
 
 - Everytime you switch tabs, the message from mounted() is printed in the console
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-overview-of-vue-keep-alive-2.com/Rhu2OAuZQJdo61JFh2EUUhaGYuNaM9e9UwkdLNCgOn-XfdK8zVYSt8KvgjzG7r8ef9xYLj6J40-3CUA_MKA6v-i4rS-yT-SldBEA21X3tDMBsmMz4ZGH0iLvkj27TVZuPaSfIVNs)
+![Google Dev Tools Console with multiple lines saying, "About has been mounted" and "Contact has been mounted"](/img/articles/vue-keep-alive/console.png)
 
 - If you fill out the input in Contact and then switch tabs, your input will not be there when you return.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-overview-of-vue-keep-alive-3.com/9Q_IEUIVSdGuh2ebm1XebAC0J5ZFdnazi2yEL10b1Pi4UNimhHDLJyUnIiUwBMx52zqTgAUtArI7mGbHk1YGIhrQBMzWrR5uYC2MXOexMaA4ypdJ4qDraOueQ0fxJ4PxdBOnLmxT)
+![Typing in the text field on the Contact Tab, clicking to the About Tab, and clicking pack to the Contact Tab where the text field is empty again](/img/articles/vue-keep-alive/without-keep-alive.gif)
 
-oth of these are because without keep-alive, Vue creates new instances of components so all of the lifecycle hooks re-run and any input you’ve made is lost.
+Both of these are because without keep-alive, Vue creates new instances of components so all of the lifecycle hooks re-run and any input you’ve made is lost.
 
 ### Implementation
 
@@ -143,11 +143,11 @@ Now, compared to before, your tab system should have the following functionality
 
 - The message from `mounted()` should be printed once and only once by each component
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-overview-of-vue-keep-alive-4.com/tw2MUSrWfVY7tF7oWdVrajJ6TDP23yeoJm5QyAVioYPV8_rVkydzcnGVSI2GwTYSsKKVONdQc71FsKwAVwccykXDac3vMic5oRd2PjzwW09eOST3_3dEiTqC-v2D7EzoRGnTOfls)
+![Google Dev Tools Console with two lines saying "About has been mounted" and "Contact has been mounted"](/img/articles/vue-keep-alive/console-2.png)
 
 - If you fill out the input on the Contact tab, it should still be there if you switch tabs and come back
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-overview-of-vue-keep-alive-5.com/qjCkHu7AhgbCibVSJ24oWF-OxjTgyTg0QunsT9KSkYLTXFNgjSqrNGAlnZa_pTMupOuQex1owrTZo0BzQLpFk62F4Q7iBnas5PRW2Y-TcJrSFv32npkuaAFUzx36840T5aNJwn81)
+![Typing in the text field on the Contact Tab, clicking to the About Tab, and clicking pack to the Contact Tab where the text field still has the same content](/img/articles/vue-keep-alive/with-keep-alive.gif)
 
 While this is a simple use case for using keep-alive components, it’s a good example of _why_ you might want to use them.
 
