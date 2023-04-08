@@ -64,10 +64,6 @@ export default {
 
 Now, if we reload our browser, we’ll see that our browser is automatically focused and we can type without having to click it first.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/the-beginners-guide-to-vue-template-refs-with-vue-3-updates-1.png)
-
-Perfect.
-
 Now time for the Composition API.
 
 ## Template Refs in the Composition API
