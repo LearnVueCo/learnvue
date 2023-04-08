@@ -19,7 +19,7 @@ By the end of this tutorial, you’ll have created a Vue 3 project, built two co
 
 Here’s what we’re going to be making.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-1.gif)
+![](/img/articles/intro-to-vue-3/1.gif)
 
 [Here’s a link to the finished codebase (including all of the CSS styles).](https://github.com/matthewmaribojoc/learnvue-vue3-tutorial)
 
@@ -46,7 +46,7 @@ Next, to create our project, we want to run `vue create <PROJECT-NAME>`
 
 If we successfully updated our CLI, we should have an option to choose Vue 3.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-2.png)
+![](/img/articles/intro-to-vue-3/2.png)
 
 Once we choose the Vue 3 option, our app should build. When it’s done, we just have to go inside our project and then run our Vue app! The commands for that are:
 
@@ -57,7 +57,7 @@ npm run serve
 
 Now, if we navigate to our `http://localhost:8080/` in our browser, we should see our app!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-3.png)
+![](/img/articles/intro-to-vue-3/3.png)
 
 Perfect!
 
@@ -105,7 +105,7 @@ npm run dev
 
 Now, if we navigate to `http://localhost:3000` – we should see this following app.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-4.png)
+![](/img/articles/intro-to-vue-3/4.png)
 
 ## Some Vue Vite features you should know
 
@@ -117,7 +117,7 @@ All you have to do is run `npm run build`.
 
 If we look at `package.json`, we see that this is calling `vite build` – which like other build processes, will bundle your Vue project and prepare your dist folder to be served.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-5.png)
+![](/img/articles/intro-to-vue-3/5.png)
 
 ### 2. Managing asset URLS
 
@@ -126,7 +126,7 @@ Like other Vue project setups, Vite offers two ways to reference your assets.
 - Absolutely – using the public folder. These assets are referenced with /_file.extension_andwill be copied to the root of your dist folder when your project is built.
 - Relatively – for example, files in the src/assets folder are relatively accessed based on the file structure of the folder. This entire folder is placed as `_assets` in the dist folder when your project is built.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-6.png)
+![](/img/articles/intro-to-vue-3/6.png)
 
 ### 3. Built-in TypeScript support
 
@@ -142,7 +142,7 @@ The biggest change in Vue 3 is the introduction of the Composition API. In this 
 
 This allows us to create [more modular, readable, and scalable code](https://learnvue.co/2020/01/12-vuejs-best-practices-for-pro-developers/) because the code for a single feature can all be written in one area of our code.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-7.png){.max-w-md}
+![](/img/articles/intro-to-vue-3/7.png){.max-w-md}
 
 If we open up the `src/components/HelloWorld.vue` file, we can see code that looks identical to the code we wrote in Vue2 – this is called the Options API.
 
@@ -221,7 +221,7 @@ Then, if we go back to our app, you’ll see that we have reactive data using th
 
 For simplicity, I’m not including all the styles in this article, but if you want to see the styles I used, you can check out the [tutorial GitHub repository](https://github.com/matthewmaribojoc/learnvue-vue3-tutorial).
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-8.gif)
+![](/img/articles/intro-to-vue-3/8.gif)
 
 Great!
 
@@ -268,7 +268,7 @@ Then, just like in the Options API, we can add a button to our template to call 
 
 Now, when we check out our application with our new clear input code, it should look a little like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-9.gif)
+![](/img/articles/intro-to-vue-3/9.gif)
 
 ## Adding a Second Component to our Vue 3 Project
 
@@ -412,13 +412,13 @@ That’s it.
 
 Okay. Let’s finally see what we got working now.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-10.gif)
+![](/img/articles/intro-to-vue-3/10.gif)
 
 ### Lifecycle Hooks in Your Vue 3 Project
 
 One another thing you should know before getting started in Vue 3 is how to use [Vue lifecycle hooks](https://learnvue.co/2020/03/how-to-use-lifecycle-hooks-in-vue3/).
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/setting-up-your-first-vue3-project-vue-3-0-release-11.png)
+![](/img/articles/intro-to-vue-3/11.png)
 
 Like other parts of the Composition API, we have to import the lifecycle hooks we want to use and declare them in the setup method.
 
