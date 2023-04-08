@@ -85,7 +85,7 @@ Finally, let’s print it up in our template in italics and surrounded by some q
 
 Alright – let’s check out what we have in our browser.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-1.png)
+![](/img/articles/vue-and-axios/1.png)
 
 We can see our quote here, but there’s all this extra information from the API response
 
@@ -100,7 +100,7 @@ axios.get('https://api.kanye.rest/').then((response) => {
 
 Alright, if we go back, we’ll see that we’re only getting the quote. Awesome.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-2.png)
+![](/img/articles/vue-and-axios/2.png)
 
 ## Using Axios with async/await
 
@@ -121,7 +121,7 @@ const loadQuote = async () => {
 
 That’s it. If we look at our app, it works exactly the same, but in our code, we’re using the async/await pattern.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-3.png)
+![](/img/articles/vue-and-axios/3.png)
 
 Awesome.
 
@@ -158,11 +158,11 @@ Now that we know how to send GET requests with Axios, let’s look at sending PO
 
 To do this in this tutorial, we’re going to be using the [JSONPlaceholder Mock API Calls](https://jsonplaceholder.typicode.com/).
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-4.png)
+![](/img/articles/vue-and-axios/4.png)
 
 And if we look at their[documentation](https://jsonplaceholder.typicode.com/guide/), they give us a `/posts`POST request.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-5.png)
+![](/img/articles/vue-and-axios/5.png)
 
 Okay – let’s make a button that will trigger our API call. In our template, let’s make a button that says *“Create Post”*and when it’s clicked, it calls a method called `createPost`.
 
@@ -203,7 +203,7 @@ Alright – let’s try this out.
 
 If we click our button, we’ll see that our console is logging a ton of information telling us that our post request was successful.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/get-kanye-west-quotes-w-vue-and-axios-beginners-guide-to-apis-6.png)
+![](/img/articles/vue-and-axios/6.png)
 
 Awesome.
 

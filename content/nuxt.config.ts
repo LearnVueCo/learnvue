@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   nitro: {
     publicAssets: [
       {
-        baseURL: 'content',
+        baseURL: 'img/articles',
         dir: __dirname + '/public'
       }
     ]

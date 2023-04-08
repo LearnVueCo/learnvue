@@ -120,7 +120,7 @@ Let’s check it out inside `App.vue`. For example. **No imports needed**, we ca
 
 And our end result should look something like this!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-1.png)
+![Styled text that says "Building your own Vue 3 Plugin - a Full Guide" in a title text and "Matt Maribojoc" in an author section](/img/articles/creating-vue-3-plugins/final.png)
 
 Awesome.
 
@@ -151,8 +151,6 @@ For example, if we wanted to change the font-size and background color of our en
 ```
 
 And let’s take a look back at our browser.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-2.png)
 
 Cool – everything is being updated according to our styles, but these can always be overridden in child components like any other CSS.
 
@@ -213,7 +211,7 @@ Then, inside `App.vue` – or any component since it’s available globally – 
 
 The result should look like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-3.png)
+![Text says that says, "Small", "Medium", and "Large" with respective font sizes](/img/articles/creating-vue-3-plugins/sizes.png)
 
 ### Using Plugin Options to Provide Customization
 
@@ -257,8 +255,6 @@ app.directive("font-size", (el, binding, vnode) => {
 
 Now, if we look back, we can see that we are successfully using our specified font sizes in our application.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-4.png)
-
 ## Adding Methods, Data, and other Component Options with Mixins
 
 A common way that plugins add reusable functionality to your Vue app is by using [Vue mixins](https://learnvue.co/2019/12/how-to-manage-mixins-in-vuejs/). Mixins are a way to add component options to Vue components.
@@ -289,8 +285,6 @@ export default {
 ```
 
 In any component that we use, this `created` hook will run and we can access our `featuredLink` property.We have two prints – one for App.vue and one for MyHeader.vue.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-5.png)
 
 ## Using Provide and Inject with Vue Plugins
 
@@ -340,8 +334,6 @@ Then, inside any component, we can inject this method and we’ll create a butto
 ```
 
 If we take a look at this, we’ll see that whenever we click our button – our log statement from our plugin is printing to the console.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-your-own-vue-3-plugin-a-full-guide-6.png)
 
 Fantastic 😌
 

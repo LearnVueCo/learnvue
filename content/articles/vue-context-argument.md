@@ -115,9 +115,7 @@ And then in a parent component, we pass it several attributes.
 </template>
 ```
 
-The result of our log statement will be:
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/explaining-the-vue-context-argument-a-composition-api-tutorial-2.png)
+The result of our log statement will be contain `test` and our `close` event.
 
 As you can see, it contains everything besides our declared props. This includes things like event listeners and HTML attributes.
 
@@ -220,9 +218,7 @@ Now, if we run this with a simple parent component like this
 </template>
 ```
 
-Here’s what our finished DOM will look like.
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/explaining-the-vue-context-argument-a-composition-api-tutorial-3.png)
+Here’s what our finished DOM will contain an `h1` since we specified a level of 1.
 
 Fantastic!
 

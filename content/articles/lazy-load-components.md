@@ -16,7 +16,7 @@ This is a great way to **improve initial page loads** as our app will be loaded 
 
 In this tutorial, we’ll learn all about `defineAsyncComponent` and look at an example that defers the loading of a popup until it’s required by our app.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-2.png)
+![](/img/articles/lazy-load-components/2.png)
 
 Okay – let’s get into it.
 
@@ -128,7 +128,7 @@ So here’s what our login component looks like, it just creates a popup by blac
 </style>
 ```
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-3.png)
+![](/img/articles/lazy-load-components/3.png)
 
 Instead of importing it and including it in our components options like we usually would…
 
@@ -184,15 +184,15 @@ If we don’t use `defineAsyncComponent`, as soon as our page loads, we’ll see
 
 While in this example, it may not make the biggest performance issue, it still slows down the load a little bit and if we have dozens of components doing this, it can really add up.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-4.png)
+![](/img/articles/lazy-load-components/4.png)
 
 However, if we look at the same tab using `defineAsyncComponent`, we’ll notice that when our page loads, `LoginPopup.vue` is nowhere to be seen. This is because it hasn’t been loaded yet.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-5.png)
+![](/img/articles/lazy-load-components/5.png)
 
 But once we click our button and tell our app to show our popup, that’s when it’s loaded from the server and we can see it in the `Network` tab.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-6.png)
+![](/img/articles/lazy-load-components/6.png)
 
 **This helps us achieve the best performance.**
 
@@ -277,7 +277,7 @@ A neat feature of Suspense is that we can display fallback content using slots a
 
 This is the result. A user will see “Loading…” and then after 3 seconds (the hard-coded value for our `setTimeout`), our component will render.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/lazy-load-components-in-vue-with-defineasynccomponent-7.png)
+![](/img/articles/lazy-load-components/7.png)
 
 **By default, all components we define using defineAsyncComponent are suspensible.**
 

@@ -102,8 +102,6 @@ This will create a more clearly defined line between the opening and closing tag
 
 I like having the active section have a light color that stands out, without being distracting.
 
-![](/img/articles/active-indent-highlights.png){.max-w-md.mx-auto}
-
 To get this, we have to change some of our VS Code settings by `cmd + p` > `Preferences: Open Settings (JSON)`
 
 ```json [settings.json]

@@ -20,7 +20,7 @@ In this tutorial, we’ll cover:
 
 Here’s an example of what we’ll be making.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-introduction-to-vue-teleport-a-new-feature-in-vue3/-image-0.gif)
+![Demo of clicking button saying "Trigger Notification", after the click - a popup appears in the bottom left with example content](/img/articles/demo.gif)
 
 And this is the DOM using Teleport. As you can see, there is this portal-target div outside of our Vue app where our template code is being “teleported”.
 
@@ -121,11 +121,10 @@ Since we passed it in `#portal-target`, our Vue app will locate the `#portal-tar
 
 This is what our result should be.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-introduction-to-vue-teleport-a-new-feature-in-vue3/-image-1.gif)
-
+![Demo of clicking button saying "Trigger Notification", after the click - a popup appears in the bottom left with example content](/img/articles/vue-teleport/demo.gif)
 Inspecting the elements and looking at the DOM makes it very clear what’s happening.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-introduction-to-vue-teleport-a-new-feature-in-vue3/-image-2.png)
+![Inspect Tab of Chrome Devtools with commented lines inside the HTML saying Teleport Start and Teleport End](/img/articles/vue-teleport/inspect-element.png)
 
 Basically, we can use all of the logic from our VuePortals [component](https://learnvue.co/2019/12/using-component-slots-in-vuejs%e2%80%8a-%e2%80%8aan-overview/), but tell our project to render that template code somewhere else!
 

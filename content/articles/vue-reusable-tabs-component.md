@@ -15,7 +15,7 @@ In this tutorial, we’ll be making a custom tab component that allows any sort 
 
 This is what we’re going to be making!
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-reusable-components-in-vuejs-tabs-1.gif)
+![4 Tabs that you can click through and change the active content.](/img/articles/vue-reusable-tabs-component/demo.gif)
 
 Hopefully, this tutorial gives you some insight into designing reusable components. Plus, you’ll get some useful Vue code too!
 
@@ -205,7 +205,8 @@ We now have all our components linked up! Let’s try it out. If you missed it e
 
 If you included the same content as me, you should see something like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-reusable-components-in-vuejs-tabs-2.png)
+![An unordered list with our tab titles and 4 divs with each of our tab content](/img/articles/vue-reusable-tabs-component/basic-without-logic.png
+)
 
 I know. It’s pretty basic right now and there’s no tab stuff at all, but don’t worry, we’re about to add all the functionality.
 
@@ -245,7 +246,7 @@ We just have to change the header code to call our new method whenever one of th
 
 Now, we should have a working tab system in which the content reacts to our clicks.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-reusable-components-in-vuejs-tabs-3.gif)
+![An unordered list with 4 Tab Labels with a div below showing the active tab](/img/articles/vue-reusable-tabs-component/actions.gif)
 
 There! we have a working tab system!
 
@@ -276,7 +277,7 @@ All in all, after spending a little bit of time to make it all pretty. This is w
 
 If you want yours to look like this, just copy the [code from GitHub.](https://github.com/matthewmaribojoc/learn-vue-tab)
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-reusable-components-in-vuejs-tabs-4.gif)
+![4 Tabs that you can click through and change the active content.](/img/articles/vue-reusable-tabs-component/demo.gif)
 
 As you can see, it’s starting to look pretty legit. Now let’s add some more component props to make it super easy to use.
 
@@ -355,7 +356,7 @@ Finally, we have to update `Demo.vue` to pass in a mode attribute to our compone
 
 Now, this is what our website looks like…
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/building-reusable-components-in-vuejs-tabs-5.gif)
+![Tab system with a button to change the color mode](/img/articles/vue-reusable-tabs-component/multiple-styles.gif)
 
 This is only the tip of the iceberg when it comes to adding custom props. It really depends on how you want to extend this tab system into your Vue project. Definitely just play around with it and see what’s possible!
 

@@ -21,7 +21,7 @@ First, we have to understand what [props are.](https://vuejs.org/v2/guide/compon
 
 Since props allow us to share data between components, it lets us organize our Vue projects and components into more modular components.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-introduction-to-vue3-props-a-beginners-guide-1.png)
+![Parents pass props to child components, and child components emit events to communicate with their parent component](/img/articles/props-in-vue-3/props-diagram.png)
 
 ## Let’s just jump into an example
 
@@ -59,7 +59,8 @@ The main motivation behind the change in the way we access Vue 3 props is to mak
 
 A big goal for the Vue Team when designing Vue 3 was to make it more scalable for large projects. Part of this was redesigning the Options API to the Composition API to allow for better code organization.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/an-introduction-to-vue3-props-a-beginners-guide-2.png){.max-w-md}
+![Grouping logic in the Composition API versus the Options API](/img/articles/props-in-vue-3/options-vs-composition.png)
+
 
 But by eliminating a majority of references to `this` and instead using explicit context and props variables, it would increase readability for large Vue projects.
 

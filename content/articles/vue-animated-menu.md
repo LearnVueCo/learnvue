@@ -16,7 +16,7 @@ I ended up building some neat active menu highlight logic using the Composition 
 
 I thought I’d share my solution – here’s what I ended up building.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/animated-active-menu-highlights-in-vuejs-daily-vue-tips-1-2.png)
+![4 menu items for Dashboard, Links, Visualization, and Settings. Clicking each one causes an animation](/img/articles/vue-animated-menu/demo.gif)
 
 Okay – let’s start coding it.
 
@@ -128,7 +128,7 @@ Back in our template, we want to add two things.
 
 Now, at this point, let’s check out what we have.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/animated-active-menu-highlights-in-vuejs-daily-vue-tips-1-3.png){.max-w-lg}
+![Clicking through each menu item causes the "active" link to be a different color](/img/articles/vue-animated-menu/clicking.gif)
 
 Much better, now let’s actually make our active menu highlighter.
 
@@ -163,7 +163,7 @@ This will actually handle the [smooth slide animation](https://learnvue.co/2020/
 
 This is what it should look like.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/animated-active-menu-highlights-in-vuejs-daily-vue-tips-1-3.png)
+![The active menu item has a blue box on its right side](/img/articles/vue-animated-menu/with-border.png)
 
 ## Animating our active menu highlight
 
@@ -181,7 +181,7 @@ const changeSelected = (i) => {
 
 Thanks to the transition we gave our highlight, the element will smoothly move between the old and new top positions.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/animated-active-menu-highlights-in-vuejs-daily-vue-tips-1-4.png)
+![4 menu items for Dashboard, Links, Visualization, and Settings. Clicking each one causes an animation](/img/articles/vue-animated-menu/demo.gif)
 
 ## All done
 

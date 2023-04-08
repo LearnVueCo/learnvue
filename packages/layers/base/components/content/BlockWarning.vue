@@ -5,7 +5,7 @@ defineProps<{
 </script>
 <template>
   <div
-    class="text-highlight rounded-lg border-2 border-yellow-500 p-4 not-prose"
+    class="text-highlight rounded-lg border-2 border-yellow-500 px-4 py-2 not-prose"
   >
     <p v-if="title" class="font-bold">{{ title }}</p>
     <slot />

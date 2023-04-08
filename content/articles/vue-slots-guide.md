@@ -124,11 +124,11 @@ In this example, it’s much easier to see why we would need multiple slots. Sin
 
 Here’s an example of what our final components might look like in the browser.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/using-vue-named-slots-to-create-multiple-template-slots-3.png)
+![](/img/articles/vue-slots-guide/3.png)
 
 If we check our DOM, we can see that template using v-slot is properly inserting content in the right places.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/using-vue-named-slots-to-create-multiple-template-slots-4.png){.max-w-lg}
+![](/img/articles/vue-slots-guide/4.png){.max-w-lg}
 
 All of this means that if we want to use slots in this component, we’re going to need more than one.
 
@@ -173,7 +173,7 @@ So wherever we declare our component with Vue named slots, we can create three `
 
 If we save and take a look at this, you’ll see that there we still see our fallback content
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/using-vue-named-slots-to-create-multiple-template-slots-1.png)
+![](/img/articles/vue-slots-guide/1.png)
 
 And that’s because our templates are not currently targeting any of our actual defined slots!
 
@@ -193,7 +193,7 @@ To fix this, using the `v-slot` directive, we’ll pass in the name of each slot
 
 Now, we’ll actually see our content being injected into each of the slots.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/using-vue-named-slots-to-create-multiple-template-slots-2.png)
+![](/img/articles/vue-slots-guide/2.png)
 
 And honestly that’s it! I know, it’s really that easy to use named slots in your code.
 
@@ -236,7 +236,7 @@ Without changing the default fallback content, we can easily implement this comp
 
 And if we look in our browser, our app will be showing the title.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/when-why-to-use-vue-scoped-slots-1.png)
+![](/img/articles/vue-slots-guide/5.png)
 
 While we could easily change the content of our slot by adding a template expression into our slot, what happens if we want to render the `info.description` from our child component.
 
@@ -307,7 +307,7 @@ Now, all of our slot props, which for our example, is only info will be availabl
 
 Our final product will then look like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/when-why-to-use-vue-scoped-slots-2.png)
+![](/img/articles/vue-slots-guide/6.png)
 
 Awesome!
 

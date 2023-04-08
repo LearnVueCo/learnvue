@@ -23,7 +23,7 @@ Everybody loves [Font Awesome](https://fontawesome.com/) – it’s one of the m
 
 You can even pass all of the options in as attributes so making your icon pulse, spin, or scale so it’s easy to customize or even animate your icons.
 
-![image](https://user-images.githubusercontent.com/18535681/159400303-8cfa1f98-2d2b-410e-9935-480115197b8b.png)
+![Vue Awesome Icon Sheet](/img/articles/free-vue-icon-libraries/vue-awesome.png)
 
 ### 2. [Vue Unicons](https://github.com/antonreshetov/vue-unicons)
 
@@ -38,7 +38,7 @@ Each Vue Unicon component acts very similarly to an svg taking a few attributes:
 
 I personally find the icons clean as hell, but you can take a lot for yourself.
 
-![image](https://user-images.githubusercontent.com/18535681/159401232-0bdfb060-af41-4b60-b9da-113ee0707435.png)
+![Vue Unicons Icon Sheet](/img/articles/free-vue-icon-libraries/vue-unicons.png)
 
 ### 3. [Vue Material Design](https://github.com/robcresswell/vue-material-design-icons)
 
@@ -48,13 +48,13 @@ Not only is there great documentation for this library, but I think that it’s 
 
 Also since Vue Material Design uses SVGs, all you have to do is change some props around to customize an icon.
 
-![image](https://user-images.githubusercontent.com/18535681/159401248-41d0c36e-9249-413b-aff3-300d959dbecf.png)
+![Vue Material Design Icons](/img/articles/free-vue-icon-libraries/vue-material-design.png)
 
 ## List of Full UI Libraries that Include A Vue Icon Library
 
 The list above just goes into some standalone Vue icon libraries, but there are a bunch of great UI libraries that you could use for entire projects. There are just some of my favorites that have an overall great interface.
 
-### 1. [Vuetify](https://vuetifyjs.com/en/)
+### 1. [Icons from Vuetify UI Library](https://vuetifyjs.com/en/)
 
 It’s impossible to have not have Vuetify on this list. As one of the most popular and well maintained Vue component libraries, it’s super flexible, yet powerful for all projects. Vuetify has over 100 component elements, comes with a responsive grid system, and full support for event handling.
 
@@ -62,7 +62,7 @@ In terms of icons, Vuetify uses support for both the Material Design and Font Aw
 
 Withweekly patches and continuous updates, Vuetify is likely to remain one of the most popular Vue libraries for several years.
 
-![image](https://user-images.githubusercontent.com/18535681/159401257-1d17bdb0-a4db-49c0-b78c-6121f5809590.png)
+![image](/img/articles/free-vue-icon-libraries/vuetify.png)
 
 ### 2. [AT UI](https://at-ui.github.io/at-ui/#/en)
 
@@ -70,15 +70,15 @@ AT UI is built for frontend web applications. With the ability to use CSS prepro
 
 Personally, I really like the minimal style and font-choices that come default with AT UI and I think that it’s intuitive and easy to add to any project. Its built-in icon library (Feather) is also a huge benefit when compared to other libraries.
 
-![image](https://user-images.githubusercontent.com/18535681/159401282-2f22a6f7-5cd9-47f6-a9da-6a56c0ccd420.png)
+![Icons from AT UI](/img/articles/free-vue-icon-libraries/at.png)
 
 ### 3. [iView](https://www.iviewui.com/)
 
-iView is one of the most popular UIlibraries because of its fantastic customization capabilities. It comes built with support for different fonts, icon sizes, element sizes, endless form options, and almost everything a developer would need to build a nice looking front-end.
+iView is one of the most popular UI libraries because of its fantastic customization capabilities. It comes built with support for different fonts, icon sizes, element sizes, endless form options, and almost everything a developer would need to build a nice looking front-end.
 
 It comes with a bunch of built in components and sleek icons that make developing a breeze. iView is definitely something to consider if you’re looking at developing a front-end, but don’t want to have to remake essential components yourself.
 
-![image](https://user-images.githubusercontent.com/18535681/159401293-659ee407-41aa-413e-b98d-72123c228032.png)
+![Icons from iView](/img/articles/free-vue-icon-libraries/iview.png)
 
 ## More Generic Icon Libraries
 
@@ -92,7 +92,7 @@ Icomoon is super popular icon library that is used by some major companies like 
 
 It’s definitely worth checking out if you’re willing to put in the extra work in integrating it into Vue.
 
-![image](https://user-images.githubusercontent.com/18535681/159401305-5d4ef30a-f975-4cf8-b1a0-e7c4766e9099.png)
+![Icomoon icon set](/img/articles/free-vue-icon-libraries/icomoon.png)
 
 ### 2. [IconMonstr](https://iconmonstr.com/)
 
@@ -100,7 +100,7 @@ Personally, IconMonstr has some of my favorite style of icon – the minimal app
 
 If you just want to quickly implement it into your project, they have a copy and paste embed code. But I think a great way to implement this into your project is to use one of the Vue Icon Libraries from the first section and implement whatever you download from IconMonstr as a custom icon.
 
-![image](https://user-images.githubusercontent.com/18535681/159401331-871dc47a-3803-462d-b1ec-a31d4e911833.png)
+![IconMonstr icons](/img/articles/free-vue-icon-libraries/iconmonstr.png)
 
 ## Build Your Own Vue Icon Set
 
