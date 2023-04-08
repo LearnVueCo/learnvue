@@ -96,9 +96,7 @@ Great. Our wrapper component is set up! Now, here’s an example of how we could
 <text-input label="hello" v-model="state.textVal" placeholder="Hello World" />
 ```
 
-If you really want to go into more depth with how v-model, $attrs, and v-bind work in Vue 3, here is a[great slide deck by Chris Fritz](https://github.com/chrisvfritz/vue-3-trends/blob/master/slides-2019-03-vueconfus.pdf)
-
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-and-why-to-use-wrapper-components-in-vue3-1.png)
+If you really want to go into more depth with how v-model, $attrs, and v-bind work in Vue 3, here is a [great slide deck by Chris Fritz](https://github.com/chrisvfritz/vue-3-trends/blob/master/slides-2019-03-vueconfus.pdf)
 
 ## What else is possible?
 
