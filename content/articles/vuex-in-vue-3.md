@@ -30,7 +30,7 @@ While many data-sharing options (props, provide/inject) are great for parent/chi
 
 Also, Vuex comes with a built-in Vue DevTools extension, allowing us to see exactly when changes to our state are being made.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/getting-started-with-vuex-in-vue-3-image-0.png)
+![](/img/articles/vuex-in-vue-3/0.png)
 
 ## The Basics of Vuex
 
@@ -116,7 +116,7 @@ export default {
 
 Fantastic - if we look at our page now, we’ll see our component properly pulling in our value through Vuex.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/getting-started-with-vuex-in-vue-3-image-2.png)
+![](/img/articles/vuex-in-vue-3/2.png)
 
 ### Using Vuex mapState
 
@@ -224,7 +224,7 @@ Here’s what committing mutations looks like calling `store.commit`.
 
 So whenever our button is clicked, we want to trigger INCREMENT_COUNT and increase the value of state by our payload.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/getting-started-with-vuex-in-vue-3-image-3.gif)
+![](/img/articles/vuex-in-vue-3/3.gif)
 
 ### Mapping Vuex Mutations - Options API
 
@@ -299,7 +299,7 @@ Vuex actions can be triggered using `store.dispatch("actionName", payload)`.
 
 If we take a look at Vue dev tools, we get a good idea of the difference between actions and mutations.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/getting-started-with-vuex-in-vue-3-image-4.png)
+![](/img/articles/vuex-in-vue-3/4.png)
 
 As we can see, actions log both their start and end times, while mutations are logged as singular events.
 
@@ -321,7 +321,7 @@ const store = createStore({
 });
 ```
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/getting-started-with-vuex-in-vue-3-image-5.gif)
+![](/img/articles/vuex-in-vue-3/5.gif)
 
 ### Mapping Vuex Actions
 
