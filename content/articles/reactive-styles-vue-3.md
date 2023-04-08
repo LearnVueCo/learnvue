@@ -50,7 +50,7 @@ That’s it!
 
 If we look at our component in the browser, we can see that our element is properly getting the value for its color from our data.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-1.png)
+![](/img/articles/reactive-styles-vue-3/1.png)
 
 This also works with more complex data structures, let’s say that we have an object called `fontStyles` and inside it has a property called `weight`.
 
@@ -87,7 +87,7 @@ export default {
 
 And now our result should look something like this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-2.png)
+![](/img/articles/reactive-styles-vue-3/2.png)
 
 ## Reactive Styles in Vue
 
@@ -106,7 +106,7 @@ All we have to do is change our reactive data and our CSS styles will update! Th
 
 So here’s what the text example would look like…
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-3.png)
+![](/img/articles/reactive-styles-vue-3/3.png)
 
 ## How Do Vue SFC Style Variables Work?
 
@@ -116,7 +116,7 @@ If we inspect element, we can get a better idea of how Vue is working its magic.
 
 Any variable referenced inside of our style section is being added as inline style on our component’s root element.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-4.png)
+![](/img/articles/reactive-styles-vue-3/4.png)
 
 Written as normal CSS that looks something like this, where we are declaring CSS variables called `--015c408c-color` and setting it to **red** and `--015c408c-font_weight` and setting it to **800**.
 
@@ -135,7 +135,7 @@ element.style {
 
 Then, the v-bind in our styles converts to using the CSS var syntax with our new CSS variables. If we look at the style for our `.text`, we can see this.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-5.png)
+![](/img/articles/reactive-styles-vue-3/5.png)
 
 This is what is allowing each element to access the data properties.
 
@@ -208,7 +208,7 @@ And let’s say our child component is built like this.
 
 This will **not change** the color because our child component does not know any CSS variables.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/how-to-use-vue-css-variables-reactive-styles-rfc-6.png)
+![](/img/articles/reactive-styles-vue-3/6.png)
 
 ### Check the Browser Support before Using
 
