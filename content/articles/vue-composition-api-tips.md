@@ -17,7 +17,6 @@ By the end of this article, you should know more about the Composition API and h
 
 The main benefit of the Composition API is the efficiently organizing and reusing code. In the Options API, code for a single feature could be separated across different component options. Now, it’s all in one place.
 
-![](https://dltqhkoxgn1gx.cloudfront.net/img/posts/4-vue3-composition-api-tips-you-should-know-1.png){.max-w-md}
 
 One of the suggested design patterns is to write your code in **separate** functions, return the properties you want exposed, and then include them in your setup method.
 
