@@ -27,8 +27,7 @@ In Vue 3, each parent (or your root Vue instance) can provide a dependency for a
 
 Then,we can inject this value in any of child.
 
-![](https://vuejs.org/assets/provide-inject.3e0505e4.png)
-\_[vuejs.org](https://vuejs.org/guide/components/provide-inject.html#prop-drilling)
+![Three-tiered element tree with our root element providing a value that's injected by a child component in the bottom tier](https://vuejs.org/assets/provide-inject.3e0505e4.png)
 
 Basically, all we need is some sort of key for our dependency – for our purposes we’ll be using a simple String.
 
@@ -153,7 +152,6 @@ If we were to just use props, we would need to continuously pass this prop throu
 
 This introduces **many places**for error and places that would need refactoring if something were to change in our codebase.
 
-${BASE*URL}/(<https://miro.medium.com/max/1270/0>*b58JvbNhE1tKv7Tb) \*[Source](https://medium.com/front-end-weekly/props-drilling-in-react-js-723be80a08e5)\_
 
 Provide/inject fixes this by only requiring the component with the original value and the component that needs that value to have code. This allows for much easier **maintenance** of our codebases.
 

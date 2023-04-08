@@ -14,7 +14,7 @@ In this tutorial, we’ll be building a basic DatePicker component that you can 
 
 Here’s a quick look at what we’ll be making.
 
-![Three selects for month, date, and year](img/articles/custom-vue-datepicker/demo.gif)
+![Three selects for month, date, and year](/img/articles/custom-vue-datepicker/demo.gif)
 
 Alright, enough introduction – let’s jump straight into building it.
 
@@ -101,7 +101,7 @@ Then, inside our template we can use [v-for loops](https://learnvue.co/2020/02/6
 
 Our app should look like this right now.
 
-![Three unstyled selects for month, date, and year](img/articles/custom-vue-datepicker/inputs.png)
+![Three unstyled selects for month, date, and year](/img/articles/custom-vue-datepicker/inputs.png)
 Let’s make this a little prettier and add the following CSS styles. Styling select elements is a little tricky so we’re going to overwrite them by using a wrapper `<div>`.
 
 ```vue
@@ -143,7 +143,7 @@ Let’s make this a little prettier and add the following CSS styles. Styling se
 
 Now here’s our current app with our new styles.
 
-![Three selects for month, date, and year, each has a gray background, a custom chevron, and some padding](img/articles/custom-vue-datepicker/inputs.png)
+![Three selects for month, date, and year, each has a gray background, a custom chevron, and some padding](/img/articles/custom-vue-datepicker/inputs.png)
 
 
 ## Building our Date `<select>` Element
@@ -232,7 +232,7 @@ Now, whenever one of our select changes we want to be able to call this method a
 
 Now, whenever we change our month, the number of days should reflect our choice.
 
-![Three selects for month, date, and year](img/articles/custom-vue-datepicker/demo.gif)
+![Three selects for month, date, and year](/img/articles/custom-vue-datepicker/demo.gif)
 
 ## Updating our Display
 

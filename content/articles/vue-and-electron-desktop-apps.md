@@ -14,11 +14,11 @@ In this article, we’re going to be taking a look at how to Vue 3 Desktop Proje
 
 To do this, we’re going to be using [Electron](https://www.electronjs.org/) – one of the most popular frameworks for building cross-platform desktop apps with JavaScript. So many popular apps are using Electron like VS Code, Slack, Twitch, and a ton more.
 
-![Electron Landing Page](img/articles/vue-and-electron-apps/electron.png)
+![Electron Landing Page](/img/articles/vue-and-electron-apps/electron.png)
 
 Let’s first take a quick look at what we’re going to be doing in this tutorial..
 
-![Vite starter app inside of a desktop application](img/articles/vue-and-electron-apps/demo.png)
+![Vite starter app inside of a desktop application](/img/articles/vue-and-electron-apps/demo.png)
 
 So this is just the Vite starter template BUT it’s in its own dedicated app – not in our browser. That’s a super cool step and a necessary one to build your own desktop apps.
 
@@ -42,7 +42,7 @@ In our terminal, we can just run a plain old `npm run dev`. get our local host u
 
 Here’s the Vite starter template!
 
-![Vite starter app inside of a browser](img/articles/vue-and-electron-apps/browser.png)
+![Vite starter app inside of a browser](/img/articles/vue-and-electron-apps/browser.png)
 
 Perfect – now it’s time to add Electron to this setup.
 
@@ -197,7 +197,7 @@ And that’s all of the code to build our basic Electron app.
 
 All we have to do now is go to our terminal and say `npm run electron:start` and…
 
-![Vite starter app inside of a desktop application](img/articles/vue-and-electron-apps/demo.png)
+![Vite starter app inside of a desktop application](/img/articles/vue-and-electron-apps/demo.png)
 
 We have our desktop app! Amazing 🙂
 
