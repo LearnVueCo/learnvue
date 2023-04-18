@@ -34,6 +34,7 @@
     "typescript": "^4.6.4",
     "unplugin-icons": "^0.15.3",
     "vite": "^4.2.1",
+    "vite-plugin-pages": "^0.29.0",
     "vue-tsc": "^0.40.4"
   },
   "workspaces": {

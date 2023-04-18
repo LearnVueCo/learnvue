@@ -2081,7 +2081,7 @@
   resolved "https://registry.npmjs.org/@types/chai/-/chai-4.3.4.tgz#e913e8175db8307d78b4e8fa690408ba6b65dee4"
   integrity sha512-KnRanxnpfpjUTqTCXslZSEdLfXExwgNxYPdiO2WGUj8+HDjFi8R3k5RVKPeSCzLjCcshCAtVO2QBbVuAV4kTnw==
 
-"@types/debug@^4.0.0":
+"@types/debug@^4.0.0", "@types/debug@^4.1.7":
   version "4.1.7"
   resolved "https://registry.npmjs.org/@types/debug/-/debug-4.1.7.tgz#7cc0ea761509124709b8b2d1090d8f6c17aadb82"
   integrity sha512-9AonUzyTjXXhEOa0DnqpzZi6VHlqKMswga9EXjpXnnqxwLtdvPPtlO8evrI5D9S6asFRCQ6v+wpiUKbw+vKqyg==
@@ -4250,7 +4250,7 @@ deep-eql@^4.1.2:
   dependencies:
     type-detect "^4.0.0"
 
-deep-equal@^2.0.5:
+deep-equal@^2.0.5, deep-equal@^2.2.0:
   version "2.2.0"
   resolved "https://registry.npmjs.org/deep-equal/-/deep-equal-2.2.0.tgz#5caeace9c781028b9ff459f33b779346637c43e6"
   integrity sha512-RdpzE0Hv4lhowpIUKKMJfeH6C1pXdtT1/it80ubgWqwI3qpuxUBpC1S4hnHg+zjnuOoDkzUtUCEEkG+XG5l3Mw==
@@ -5001,6 +5001,13 @@ espree@^9.3.1, espree@^9.5.1:
     acorn-jsx "^5.3.2"
     eslint-visitor-keys "^3.4.0"
 
+esprima-extract-comments@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/esprima-extract-comments/-/esprima-extract-comments-1.1.0.tgz#0dacab567a5900240de6d344cf18c33617becbc9"
+  integrity sha512-sBQUnvJwpeE9QnPrxh7dpI/dp67erYG4WXEAreAMoelPRpMR7NWb4YtwRPn9b+H1uLQKl/qS8WYmyaljTpjIsw==
+  dependencies:
+    esprima "^4.0.0"
+
 esprima@^4.0.0, esprima@^4.0.1, esprima@~4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/esprima/-/esprima-4.0.1.tgz#13b04cdb3e6c5d19df91ab6987a8695619b0aa71"
@@ -5137,6 +5144,14 @@ externality@^1.0.0:
     mlly "^1.0.0"
     pathe "^1.0.0"
     ufo "^1.0.0"
+
+extract-comments@^1.1.0:
+  version "1.1.0"
+  resolved "https://registry.npmjs.org/extract-comments/-/extract-comments-1.1.0.tgz#b90bca033a056bd69b8ba1c6b6b120fc2ee95c18"
+  integrity sha512-dzbZV2AdSSVW/4E7Ti5hZdHWbA+Z80RJsJhr5uiL10oyjl/gy7/o+HI1HwK4/WSZhlq4SNKU3oUzXlM13Qx02Q==
+  dependencies:
+    esprima-extract-comments "^1.1.0"
+    parse-code-context "^1.0.0"
 
 fast-deep-equal@^3.1.1, fast-deep-equal@^3.1.3:
   version "3.1.3"
@@ -8912,6 +8927,11 @@ parent-module@^2.0.0:
   dependencies:
     callsites "^3.1.0"
 
+parse-code-context@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.npmjs.org/parse-code-context/-/parse-code-context-1.0.0.tgz#718c295c593d0d19a37f898473268cc75e98de1e"
+  integrity sha512-OZQaqKaQnR21iqhlnPfVisFjBWjhnMl5J9MgbP8xC+EwoVqbXrq78lp+9Zb3ahmLzrIX5Us/qbvBnaS3hkH6OA==
+
 parse-entities@^4.0.0:
   version "4.0.1"
   resolved "https://registry.npmjs.org/parse-entities/-/parse-entities-4.0.1.tgz#4e2a01111fb1c986549b944af39eeda258fc9e4e"
@@ -12045,6 +12065,21 @@ vite-plugin-inspect@^0.7.21:
     fs-extra "^11.1.1"
     picocolors "^1.0.0"
     sirv "^2.0.2"
+
+vite-plugin-pages@^0.29.0:
+  version "0.29.0"
+  resolved "https://registry.npmjs.org/vite-plugin-pages/-/vite-plugin-pages-0.29.0.tgz#8a7352cbbbc463fd2a725d67e221af8de8992c2f"
+  integrity sha512-vRgLflQNMs8QnDB8A5XwX8b2XYSIN1Mdy3Bx7A7N9NTFeybRj/zpvoosdbMgJ3LsJ84AznHC3GytWQZGNpE5BA==
+  dependencies:
+    "@types/debug" "^4.1.7"
+    debug "^4.3.4"
+    deep-equal "^2.2.0"
+    extract-comments "^1.1.0"
+    fast-glob "^3.2.12"
+    json5 "^2.2.3"
+    local-pkg "^0.4.3"
+    picocolors "^1.0.0"
+    yaml "^2.2.1"
 
 vite-plugin-vue-inspector@^3.4.0:
   version "3.4.0"

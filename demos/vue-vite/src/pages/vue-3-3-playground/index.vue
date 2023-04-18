@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import SimpleInput from '@/components/dummy/SimpleInput.vue'
-import SimpleText from '@/components/dummy/SimpleText.vue'
-import ImportedTypes from '@/components/dummy/ImportedTypes.vue'
+import SimpleInput from './components/SimpleInput.vue'
+import SimpleText from './components/SimpleText.vue'
+import ImportedTypes from './components/ImportedTypes.vue'
 const text = ref('Hello World')
 </script>
 
