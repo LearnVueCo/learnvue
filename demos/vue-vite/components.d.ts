@@ -7,7 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    FadeTransition: typeof import('./src/components/FadeTransition.vue')['default']
+    FadeTransition: typeof import('./src/pages/transition/components/FadeTransition.vue')['default']
     Foo: typeof import('./src/components/dummy/Foo.vue')['default']
     LearnVueIcon: typeof import('./src/components/LearnVueIcon.vue')['default']
     MyButton: typeof import('./src/components/atoms/MyButton.vue')['default']
