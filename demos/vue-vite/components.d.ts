@@ -8,6 +8,7 @@ export {}
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
     FadeTransition: typeof import('./src/components/FadeTransition.vue')['default']
+    Foo: typeof import('./src/components/dummy/Foo.vue')['default']
     LearnVueIcon: typeof import('./src/components/LearnVueIcon.vue')['default']
     MyButton: typeof import('./src/components/atoms/MyButton.vue')['default']
     MyInput: typeof import('./src/components/writable-computed-v-model/MyInput.vue')['default']
@@ -16,6 +17,8 @@ declare module '@vue/runtime-core' {
     PropTypes: typeof import('./src/components/PropTypes.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    SimpleText: typeof import('./src/components/dummy/SimpleText.vue')['default']
     SocialCard: typeof import('./src/components/SocialCard.vue')['default']
+    Text: typeof import('./src/components/dummy/text.vue')['default']
   }
 }

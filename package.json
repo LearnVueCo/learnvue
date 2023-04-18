@@ -6,6 +6,9 @@
     "packages/**/*",
     "demos/*"
   ],
+  "nohoist": [
+    "**/vue-vite/**"
+  ],
   "scripts": {
     "dev": "turbo dev",
     "dev:demos": "turbo dev --filter=@learnvue/demo-*",
