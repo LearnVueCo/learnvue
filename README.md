@@ -9,5 +9,4 @@ The `content` folder is a [Nuxt Layer](https://nuxt.com/docs/getting-started/lay
 The `demos` folder contains the source code for the examples used in the tutorials and videos. These apps are deployed to enable the preview embeds on the website.
 
 The `packages` folder contains code that ends up being used in a private repo to create the actual site. 
-  - `layers/base` is a Nuxt Layer with some smart defaults specific for LearnVue app
   - `presets/tailwind` is a Tailwind preset with a good base for LearnVue branded content
