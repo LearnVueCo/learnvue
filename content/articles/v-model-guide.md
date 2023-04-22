@@ -36,16 +36,7 @@ const value = ref('')
 
 When we type in our text input, we’ll see that our data property is changing.
 
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Try it! Start typing
-subheader: Value is bound to our input
-browserTitle: v-model Demo
-
----
-::
+:demo-window{src="/v-model?component=basic" type="vite"}
 
 ## The difference between `v-model` and `v-bind`
 
@@ -77,18 +68,7 @@ This reduces the number of times our v-model is trying to sync with our Vue inst
 <input type="text" v-model.lazy="value" />
 ```
 
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Try it! Start typing
-subheader: It only updates once our input loses focus
-browserTitle: v-model Demo
-demoProps: {lazy: true}
-size: md
----
-
-::
+:demo-window{src="/v-model?component=lazy" type="vite"}
 
 ### .number
 
@@ -102,18 +82,7 @@ One way to ensure that our value is handled as a Number is to use the `.number` 
 <input type="number" v-model.number="value" />
 ```
 
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Try it! Start typing
-subheader: Our value has to be a number
-browserTitle: v-model Demo
-demoProps: {number: true}
-size: md
-
----
-::
+:demo-window{src="/v-model?component=number" type="vite"}
 
 ### .trim
 
@@ -123,18 +92,7 @@ Similar to trim methods in most programming languages, the .trim modifier remove
 <input type="text" v-model.trim="value" />
 ```
 
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Try it! Start typing
-subheader: Any leading or trailing whitespace gets trimmed!
-browserTitle: v-model Demo
-demoProps: {trim: true}
-size: md
----
-
-::
+:demo-window{src="/v-model?component=trim" type="vite"}
 
 ### Chaining Modifiers
 
@@ -232,18 +190,8 @@ const firstName = ref('')
 </template>
 ```
 
-::demo-wrapper
----
+:demo-window{src="/v-model?component=custom" type="vite"}
 
-demo: DemoVModel
-header: Custom v-model!
-subheader: Our parent binds to props and listens for updates
-browserTitle: Custom v-model Demo
-demoProps: {customTextInput: true}
-size: md
----
-
-::
 
 ## Tips for using v-model
 
@@ -325,19 +273,6 @@ defineEmits(['update:modelValue', 'update:lastName'])
 
 ::
 
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Multiple v-models
-subheader: We can bind as many v-models as we want
-browserTitle: Multiple v-model Demo
-demoProps: {multiple: true}
-size: md
----
-
-::
-
 ### Custom modifiers for our v-model
 
 As we’ve discussed, there are a few modifiers built into Vue. But there will come a time when we’re going to want to add our own.
@@ -411,19 +346,6 @@ const emitValue = (evt) => {
   </div>
 </template>
 ```
-
-::demo-wrapper
----
-
-demo: DemoVModel
-header: Try it! Start typing
-subheader: Any whitespace is removed before we emit!
-browserTitle: v-model Demo
-demoProps: {noWhitespace: true}
-size: md
----
-
-::
 
 Whenever our input changes and we have a space, it will be removed in the parent value!
 

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { fadeTransition } from '../utils/transitions'
+import FadeTransition from './components/FadeTransition.vue'
+import { fadeTransition } from './utils/transitions'
 const showImage = ref(true)
 
 const selectedTab = ref(0)
