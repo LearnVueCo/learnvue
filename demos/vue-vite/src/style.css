@@ -98,23 +98,23 @@
   }
 
   .text-highlight {
-    @apply text-charcoal dark:text-white;
+    @apply text-white;
   }
 
   .fill-highlight {
-    @apply fill-charcoal dark:fill-white;
+    @apply fill-white;
   }
 
   .ring-highlight {
-    @apply ring-charcoal dark:ring-white;
+    @apply ring-white;
   }
 
   .stroke-highlight {
-    @apply stroke-charcoal dark:stroke-white;
+    @apply stroke-white;
   }
 
   .border-highlight {
-    @apply border-charcoal dark:border-white;
+    @apply border-white;
   }
 }
 

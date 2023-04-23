@@ -7,6 +7,9 @@
     "demos/*",
     "challenges/**/*"
   ],
+  "nohoist": [
+    "**/vue-vite/**"
+  ],
   "scripts": {
     "dev:challenges": "turbo dev --filter=@learnvue/challenge-*",
     "dev:demos": "turbo dev --filter=@learnvue/demo-*",

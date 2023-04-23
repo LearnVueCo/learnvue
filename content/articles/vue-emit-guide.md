@@ -157,7 +157,7 @@ sLang: vue
 
 :demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
 
-While this is a simple example, bringing this logic outside of our component gives us **easier access** to other properties in our data and helps keep our logic organized in larger files.
+While this is a simple example, extracting this logic outside of our component gives us **easier access** to other properties in our data and helps keep our logic organized in larger files.
 
 ## Emitting Events with `setup()`
 
