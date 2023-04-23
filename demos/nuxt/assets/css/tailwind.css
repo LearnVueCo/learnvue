@@ -66,20 +66,20 @@
 }
 
 @layer utilities {
-  .shadow-default-sm {
+  .-sm {
     @apply shadow-sm dark:shadow-smDark;
   }
-  .shadow-default,
-  .shadow-default-lg {
+  .,
+  .-lg {
     @apply shadow-lg dark:shadow-lgDark;
   }
 
-  .shadow-default-xl {
+  .-xl {
     @apply shadow-xl dark:shadow-xlDark;
   }
 
   .shadow-hover {
-    @apply shadow-default hover:shadow-default-xl transition-shadow;
+    @apply hover:-xl transition-shadow;
   }
 
   .bg-default {
