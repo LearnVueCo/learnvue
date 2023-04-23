@@ -4,10 +4,11 @@
   "workspaces": [
     "content",
     "packages/**/*",
-    "demos/*"
+    "demos/*",
+    "challenges/**/*"
   ],
   "scripts": {
-    "dev": "turbo dev",
+    "dev:challenges": "turbo dev --filter=@learnvue/challenge-*",
     "dev:demos": "turbo dev --filter=@learnvue/demo-*",
     "build": "turbo build"
   }
