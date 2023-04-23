@@ -1,14 +1,40 @@
 {
-  "numTotalTestSuites": 0,
-  "numPassedTestSuites": 0,
+  "numTotalTestSuites": 1,
+  "numPassedTestSuites": 1,
   "numFailedTestSuites": 0,
   "numPendingTestSuites": 0,
-  "numTotalTests": 0,
+  "numTotalTests": 1,
   "numPassedTests": 0,
-  "numFailedTests": 0,
+  "numFailedTests": 1,
   "numPendingTests": 0,
   "numTodoTests": 0,
-  "startTime": 1682266845651,
-  "success": true,
-  "testResults": []
+  "startTime": 1682272271817,
+  "success": false,
+  "testResults": [
+    {
+      "assertionResults": [
+        {
+          "ancestorTitles": [
+            ""
+          ],
+          "fullName": " should return the runtimeConfig from nuxt.config",
+          "status": "failed",
+          "title": "should return the runtimeConfig from nuxt.config",
+          "duration": 6,
+          "failureMessages": [
+            "expected {} to deeply equal { hello: 'world' }"
+          ],
+          "location": {
+            "line": 6,
+            "column": 3
+          }
+        }
+      ],
+      "startTime": 1682272272635,
+      "endTime": 1682272272641,
+      "status": "failed",
+      "message": "",
+      "name": "/Users/matthewmaribojoc/Programming/LearnVue/learnvue-workspace/learnvue/challenges/nuxt-basics/_template/tests/index.test.ts"
+    }
+  ]
 }

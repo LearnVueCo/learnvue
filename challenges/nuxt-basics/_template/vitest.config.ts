@@ -4,6 +4,9 @@ export default defineVitestConfig({
   test: {
     environment: 'nuxt',
     globals: true,
-    dir: 'tests'
+    dir: 'tests',
+    silent: true,
+    reporters: ['json'],
+    outputFile: 'tests/results.json'
   }
 })
