@@ -66,22 +66,6 @@
 }
 
 @layer utilities {
-  .-sm {
-    @apply shadow-sm dark:shadow-smDark;
-  }
-  .,
-  .-lg {
-    @apply shadow-lg dark:shadow-lgDark;
-  }
-
-  .-xl {
-    @apply shadow-xl dark:shadow-xlDark;
-  }
-
-  .shadow-hover {
-    @apply hover:-xl transition-shadow;
-  }
-
   .bg-default {
     @apply bg-white dark:bg-charcoal-800;
   }
