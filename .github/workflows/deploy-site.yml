@@ -4,7 +4,7 @@ on:
     branches:
       - main
     paths:
-      - content/**
+      - articles/**
 jobs:
   call-deploy-hook:
     runs-on: ubuntu-latest

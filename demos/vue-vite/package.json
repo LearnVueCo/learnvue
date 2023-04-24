@@ -11,6 +11,7 @@
   "dependencies": {
     "@formkit/auto-animate": "^1.0.0-beta.3",
     "@iconify-prerendered/vue-fluent": "^0.18.1661146680",
+    "@tailwindcss/typography": "^0.5.9",
     "@vitejs/plugin-vue-jsx": "^3.0.1",
     "@vueuse/core": "^9.10.0",
     "magic-regexp": "^0.6.2",
