@@ -4,25 +4,16 @@
   "private": true,
   "scripts": {
     "build": "nuxi build",
-    "dev": "nuxi dev --port 8086",
-    "dev:https": "nuxi dev --https --ssl-cert localhost.pem --ssl-key localhost-key.pem --port 8086",
+    "dev": "nuxi dev",
     "generate": "nuxi generate",
     "preview": "nuxi preview"
   },
   "devDependencies": {
-    "@nuxt/content": "2.4.2",
-    "@nuxt/devtools": "npm:@nuxt/devtools-edge@latest",
-    "@nuxt/image-edge": "^1.0.0-27769790.4b27db3",
+    "@nuxt/devtools": "^0.4.1",
     "@nuxtjs/color-mode": "^3.2.0",
-    "@nuxtjs/i18n": "^8.0.0-beta.9",
-    "@nuxtjs/supabase": "^0.3.0",
-    "@nuxtjs/tailwindcss": "^6.4.1",
-    "@storyblok/nuxt": "^5.0.2",
-    "@tailwindcss/typography": "^0.5.9",
+    "@nuxtjs/tailwindcss": "^6.6.6",
     "@types/node": "^18.11.18",
-    "@vueuse/nuxt": "^9.13.0",
-    "nuxt": "^3.4.2",
-    "nuxt-icon": "^0.1.6",
-    "nuxt-seo-kit": "^1.3.7"
+    "@vueuse/nuxt": "^10.0.2",
+    "nuxt": "^3.4.2"
   }
 }

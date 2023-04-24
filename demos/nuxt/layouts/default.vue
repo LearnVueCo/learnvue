@@ -11,9 +11,6 @@ const isDark = computed(() => route.query.mode === 'dark')
     }"
   >
     <div class="min-h-screen text-default bg-default">
-      <OgImageStatic />
-
-      <SiteHeader v-if="!isEmbed" />
       <div
         class="container mx-auto"
         :class="{

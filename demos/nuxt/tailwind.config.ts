@@ -1,5 +1,16 @@
-/** @type {import('tailwindcss').Config} */
-module.exports = {
+import { Config } from 'tailwindcss'
+
+const disabledCss = {
+  'code::before': false,
+  'code::after': false,
+  'blockquote p:first-of-type::before': false,
+  'blockquote p:last-of-type::after': false,
+  pre: false,
+  code: false,
+  'pre code': false
+}
+
+export default <Config>{
   exclude: ['.nuxt'],
   darkMode: 'class',
   theme: {
@@ -7,16 +18,43 @@ module.exports = {
       center: true
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial':
+          'radial-gradient(circle at center, var(--tw-gradient-stops))'
+      },
+      screens: {
+        '3xl': '90rem',
+        '4xl': '114rem'
+      },
       fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        title: ['Rubik', 'sans-serif'],
+        sans: [
+          'Rubik',
+          '-apple-system',
+          'Roboto',
+          'Oxygen',
+          'Ubuntu',
+          'Cantarell',
+          'Fira Sans',
+          'Droid Sans',
+          'Helvetica Neue',
+          'sans-serif'
+        ],
+        prose: ['Inter', 'sans-serif'],
+        mono: ['Dank Mono', 'monospace'],
         handwritten: ['Virgil', 'sans-serif']
       },
-      boxShadow: {
-        sm: '0.25rem 0.25rem 0px 0px rgba(0, 0, 0, 0.1)',
-        smHeavy: '0.25rem 0.25rem 0px 0px rgba(0, 0, 0, 0.3)',
-        lg: '0.5rem 0.5rem 0px 0px rgba(0, 0, 0, 0.1)',
-        lgHeavy: '0.5rem 0.5rem 0px 0px rgba(0, 0, 0, 0.3)'
+      padding: {
+        xs: '0.5rem', // p-2
+        sm: '1rem', // p-4
+        md: '2rem', // p-8
+        lg: '3rem' // p-12
+      },
+      typography: {
+        DEFAULT: { css: disabledCss },
+        sm: { css: disabledCss },
+        lg: { css: disabledCss },
+        xl: { css: disabledCss },
+        '2xl': { css: disabledCss }
       },
       colors: {
         green: {
@@ -66,10 +104,15 @@ module.exports = {
       backgroundSize: ['hover', 'group-hover']
     }
   },
-  content: ['./**/*.{astro,html,js,jsx,md,mdx,svelte,ts,tsx,vue}'],
+  content: [
+    'components/**/*.{vue,js}',
+    'layouts/**/*.vue',
+    'pages/**/*.{vue,js}',
+    'content/**/*.{md,yml,json,json5,csv}',
+    'assets/**/*.svg'
+  ],
   plugins: [
-    require('@tailwindcss/typography'),
-    function ({ addComponents }) {
+    function ({ addComponents }: { addComponents: (args: any) => void }) {
       addComponents({
         '.container': {
           maxWidth: '90%',
