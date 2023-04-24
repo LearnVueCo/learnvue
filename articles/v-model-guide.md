@@ -17,7 +17,7 @@ Vue `v-model` is a directive that creates a two-way data binding between a value
 
 A common use case for using v-model is when designing forms and inputs. We can use it to have our DOM input elements be able to modify the data in our Vue instance.
 
-Let’s look at a simple example that uses a v-model on a text input.
+Let's look at a simple example that uses a `v-model` on a text input to keep a `ref` in sync with the value in our input.
 
 ```vue{3}[VueVModel.vue]
 <template>
@@ -34,13 +34,13 @@ const value = ref('')
 </script>
 ```
 
-When we type in our text input, we’ll see that our data property is changing.
+When we type in our text input, we'll see that our data property is changing.
 
 :demo-window{src="/v-model?component=basic" type="vite"}
 
 ## The difference between `v-model` and `v-bind`
 
-A directive that is commonly switched up with `v-model` is the `v-bind` directive.
+Two directives that is commonly switched up with `v-model` is the `v-bind` directive.
 
 The difference between the two is that `v-model` provides **two-way data binding.**
 
@@ -51,6 +51,25 @@ However, `v-bind` only binds data **one way**. Meaning that we can pass data to 
 In the example above, `v-bind` would set the input to `value`. But if we type in our input, those changes are **not saved in state**. The next time that our component re-renders, our input will be reset to the current `value` from our component.
 
 This may seem like a small difference, but it means that our data might not be in sync with what's actually in the input that it's supposed to model. We always want to make sure that our state is in alignment with our data - so be careful when choosing between `v-model` and `v-bind`.
+
+An example of using `v-bind` is passing props where we want to pass a reactive value to a child component. 
+
+```vue
+<script setup>
+import Foo from './components/Foo.vue'
+import { ref } from 'vue'
+
+const count = ref(0)
+</script>
+
+<template>
+<!-- pass count to Foo as a prop -->
+<Foo v-bind:count="count" />
+
+<!-- or using `:` shorthand -->
+<Foo :count="count" />
+</template>
+```
 
 ## Modifiers for v-model
 
@@ -104,7 +123,7 @@ Each of these can be added like this and can even be chained together.
 
 ## Using Vue v-model in custom components
 
-Alright, now that we know the basics of v-model inside of forms/inputs, let’s look at an interesting use for v-model – **creating two-way data binding between components.**
+Alright, now that we know the basics of v-model inside of forms/inputs, let's look at an interesting use for v-model – **creating two-way data binding between components.**
 
 In Vue, data binding between components has two main steps:
 
@@ -126,9 +145,9 @@ Using v-model on a custom component allows us to do both of these stops with one
 
 `value` acts as our source of truth. We bind it to our child component to set the value of our input, and when our input changes - we update with `value = $event` - which sets value to the new value of our input.
 
-Let’s continue with our example of using v-model for a custom text input called `CustomTextInput.vue`.
+Let's continue with our example of using v-model for a custom text input called `CustomTextInput.vue`.
 
-The default name for a value passed using v-model is `modelValue` – which is what we’ll be using for our example.
+The default name for a value passed using v-model is `modelValue` – which is what we'll be using for our example.
 
 However, we can pass a custom model name like this. When we use a custom model name, the name of the emitted method will be `update:name` and the prop passed will be `name`.
 
@@ -137,7 +156,7 @@ However, we can pass a custom model name like this. When we use a custom model n
 <custom-text-input v-model:name="value" />
 ```
 
-Here’s a handy graphic from the Vue docs to summarize it.
+Here's a handy graphic from the Vue docs to summarize it.
 
 ![v-model:propName="dataToBind"](https://v3-migration.vuejs.org/images/v-bind-instead-of-sync.png){.max-w-md.mx-auto}
 
@@ -145,10 +164,10 @@ Here’s a handy graphic from the Vue docs to summarize it.
 
 ### Using v-model from our custom component
 
-There are two things we have to do inside our child component - which for us will be `CustomTextInput.vue`:
+Once again, there are two things we have to do inside our child component - which for us will be `CustomTextInput.vue`:
 
-- Accept our v-model value as a prop
-- Emit an update event when our input changes
+1. Accept our v-model value as a prop
+2. Emit an update event when our input changes
 
 ```vue [CustomTextInput.vue]
 <script setup>
@@ -195,7 +214,7 @@ const firstName = ref('')
 
 ## Tips for using v-model
 
-Now that we've seen a basic example of using `v-model`` to bind data between two components, let’s take a look at some more advanced ways to use the v-model directive.
+Now that we've seen a basic example of using `v-model`` to bind data between two components, let's take a look at some more advanced ways to use the v-model directive.
 
 ### Using v-model multiple times for one component
 
@@ -203,7 +222,7 @@ Since we can name our `v-model`, we can use multiple of them on a single compone
 
 We have to be sure to name each one uniquely so the props/events are unique!
 
-Let’s add a second v-model to our input called `lastName`.
+Let's add a second v-model to our input called `lastName`.
 
 ::prose-code-multiple
 ---
@@ -275,9 +294,9 @@ defineEmits(['update:modelValue', 'update:lastName'])
 
 ### Custom modifiers for our v-model
 
-As we’ve discussed, there are a few modifiers built into Vue. But there will come a time when we’re going to want to add our own.
+As we've discussed, there are a few modifiers built into Vue. But there will come a time when we're going to want to add our own.
 
-Let’s say we want to create a modifier that removes all spaces from our input. We’ll call it `no-whitespace`
+Let's say we want to create a modifier that removes all spaces from our input. We'll call it `no-whitespace`
 
 ```html [custom modifiers]
 <custom-text-input
@@ -323,7 +342,7 @@ const emitValue = (evt) => {
   if (props.lastNameModifiers['no-whitespace']) {
     val = val.replace(/\s/g, '')
   }
-  emit(`update:lastName`, val)
+  emit('update:lastName', val)
 }
 </script>
 
@@ -353,4 +372,4 @@ Whenever our input changes and we have a space, it will be removed in the parent
 
 Hopefully, this guide taught you something new about Vue v-model.
 
-In its base use case like forms and input data, v-model is a really simple concept. However, when we begin to create custom components and work with more complex data, we can really unleash the true power of v-model.
+In its simplest use case like forms and input data, `v-model` is a really simple concept. However, when we begin to create custom components and work with more complex data, we can really unleash the true power of v-model.
