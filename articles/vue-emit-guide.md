@@ -88,6 +88,135 @@ In Vue 3, we have 2 different ways to do this:
 
 Let’s check out an example for each.
 
+## Usage in `<script setup>`
+
+When we are using `<script setup>`, we don't have access to the component instance or the setup function's `context` argument.
+
+Soooo. How do we get `emit`?
+
+In this case, we have a compiler macro called `defineEmits` that let us:
+
+- specify events that our component emits
+- add validations for each event
+- have access to the same value as `context.emit` so we can emit events
+
+In the simplest case, `defineEmits` array of strings, with each one being the name of an event.
+
+```vue{}[MyTextInput.vue]
+<script setup>
+const emit = defineEmits(['customChange'])
+
+const handleChange = (event) => {
+  emit('customChange', event.target.value.toUpperCase())
+}
+</script>
+```
+
+:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
+
+However, if we pass an object, we can add a validator function for each event that lets us check we're emitting events with proper values.
+
+Like event listeners, the validator accepts however many values as we pass in.
+
+This works similar to prop validation, where if our validator returns `false`, we'll get a warning in our console. While the event with the unvalidated value will still be emitted, the console warning provides **valuable feedback** during development.
+
+```vue{}[MyTextInput.vue]
+<script setup>
+const emit = defineEmits({
+  unvalidatedEvent: null, // if we want an event without validation
+  customChange: (s) => {
+    if (s && typeof s === 'string') {
+      return true
+    } else {
+      console.warn(`Invalid submit event payload!`)
+      return false
+    }
+  },
+})
+
+const handleChange = (event) => {
+  // no console warning
+  emit('customChange', event.target.value.toUpperCase())
+}
+
+onMounted(() => {
+  emit('customChange', 1) // not a string, warning!
+})
+</script>
+```
+
+### Type Based `defineEmits`
+
+
+Using `defineEmits(['customChange'])` is called the runtime declaration since it creates a runtime check for your component events. 
+
+However, if we want to unleash the full power of Typescript, we can also used type-based `defineEmits`. This is typically the method that I choose to use. 
+
+Here's the initial component that we wrote with this syntax.
+
+```vue
+<script setup lang="ts">
+const emit = defineEmits<{
+ (e: 'customChange', value: number): void 
+}>
+const handleChange = (event) => {
+  emit('customChange', event.target.value.toUpperCase())
+}
+</script>
+
+```
+
+So when we used the type-based method, we can specify our eventName as `e` and then add any payload options after that. 
+
+However, in the upcoming Vue 3.3 release, we're going to get an even cleaner way to write this. See [this tweet by Evan You](https://twitter.com/youyuxi/status/1641403989026820098) to learn more.
+
+![](https://pbs.twimg.com/media/Fsdv-HJaIAYzKIK?format=png&name=900x900){.w-72}
+
+## Emitting Events with `setup()`
+
+In the Composition API, if we use the `setup` function, we don't have access to our component with `this` - meaning we can't call `this.$emit()` to send our event.
+
+Instead, we can access our `emit` method by using the second argument of our `setup` function – `context`.
+
+`context` has access to your components slots, attributes, and most importantly for us, its **emit method**.
+
+We can call `context.emit` with the same event name and values that we used before.
+
+```vue{4,6,13,15}[MyTextInput.vue]
+<script>
+  export default {
+    // can use the entire context object
+    setup (props, context) {
+        const handleChange = (event) => {
+            context.emit("customChange", event.target.value)
+        }
+        return {
+            handleChange
+        }
+    },
+    // or we can destructure it and get `emit`
+    setup (props, { emit }) { 
+        const handleChange = (event) => {
+            emit("customChange", event.target.value)
+        }
+        return {
+            handleChange
+        }
+    }
+  }
+</script>
+
+<template>
+  <div>
+    <label>My Custom Input</label>
+    <input type="text" placeholder="Custom input!" @input="handleChange" />
+  </div>
+</template>
+
+```
+
+:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
+
 ## `this.$emit` Options API
 
 Like most things in Vue 3, we have the choice of using the Options API or the Composition API.
@@ -159,107 +288,6 @@ sLang: vue
 
 While this is a simple example, extracting this logic outside of our component gives us **easier access** to other properties in our data and helps keep our logic organized in larger files.
 
-## Emitting Events with `setup()`
-
-In the Composition API, if we use the `setup` function, we don't have access to our component with `this` - meaning we can't call `this.$emit()` to send our event.
-
-Instead, we can access our `emit` method by using the second argument of our `setup` function – `context`.
-
-`context` has access to your components slots, attributes, and most importantly for us, its **emit method**.
-
-We can call `context.emit` with the same event name and values that we used before.
-
-```vue{4,6,13,15}[MyTextInput.vue]
-<script>
-  export default {
-    // can use the entire context object
-    setup (props, context) {
-        const handleChange = (event) => {
-            context.emit("customChange", event.target.value)
-        }
-        return {
-            handleChange
-        }
-    },
-    // or we can destructure it and get `emit`
-    setup (props, { emit }) { 
-        const handleChange = (event) => {
-            emit("customChange", event.target.value)
-        }
-        return {
-            handleChange
-        }
-    }
-  }
-</script>
-
-<template>
-  <div>
-    <label>My Custom Input</label>
-    <input type="text" placeholder="Custom input!" @input="handleChange" />
-  </div>
-</template>
-
-```
-
-:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
-
-## Usage in `<script setup>`
-
-When we are using `<script setup>`, we don't have access to the component instance or the setup function's `context` argument.
-
-Soooo. How do we get `emit`?
-
-In this case, we have a compiler macro called `defineEmits` that let us:
-
-- specify events that our component emits
-- add validations for each event
-- have access to the same value as `context.emit` so we can emit events
-
-In the simplest case, `defineEmits` array of strings, with each one being the name of an event.
-
-```vue{}[MyTextInput.vue]
-<script setup>
-const emit = defineEmits(['customChange'])
-
-const handleChange = (event) => {
-  emit('customChange', event.target.value.toUpperCase())
-}
-</script>
-```
-
-:demo-window{src="/articles/vue-emit-guide/intermediate" type="nuxt"}
-
-However, if we pass an object, we can add a validator function for each event that lets us check we're emitting events with proper values.
-
-Like event listeners, the validator accepts however many values as we pass in.
-
-This works similar to prop validation, where if our validator returns `false`, we'll get a warning in our console. While the event with the unvalidated value will still be emitted, the console warning provides **valuable feedback** during development.
-
-```vue{}[MyTextInput.vue]
-<script setup>
-const emit = defineEmits({
-  unvalidatedEvent: null, // if we want an event without validation
-  customChange: (s) => {
-    if (s && typeof s === 'string') {
-      return true
-    } else {
-      console.warn(`Invalid submit event payload!`)
-      return false
-    }
-  },
-})
-
-const handleChange = (event) => {
-  // no console warning
-  emit('customChange', event.target.value.toUpperCase())
-}
-
-onMounted(() => {
-  emit('customChange', 1) // not a string, warning!
-})
-</script>
-```
 
 ## Best Practices
 
