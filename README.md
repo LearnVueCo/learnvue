@@ -1,3 +1,5 @@
+![lv-background-thin](https://user-images.githubusercontent.com/18535681/235318736-ba629f89-0e65-41bd-92b4-2891551d3e1e.png)
+
 # LearnVue
 
 Content and a public Nuxt Layer for LearnVue's website and videos.
