@@ -20,3 +20,6 @@ dist
 *.sln
 *.sw?
 *.retypewriter
+
+# script files
+*.script.md
