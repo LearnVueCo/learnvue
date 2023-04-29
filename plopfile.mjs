@@ -85,6 +85,13 @@ export default function (plop) {
         template: `${data.name}`
       })
 
+      actions.push({
+        type: 'modify',
+        path: `${plopPath}/README.md`,
+        pattern: /(-- EXAMPLE PATH --)/gi,
+        template: `${plopPath}`
+      })
+
       return [...actions]
     }
   })
