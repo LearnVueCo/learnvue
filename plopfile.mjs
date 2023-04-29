@@ -57,7 +57,8 @@ export default function (plop) {
         message: 'Scope (Example folder): ',
         choices: [
           { name: 'Nuxt', value: 'nuxt-3' },
-          { name: 'UI', value: 'ui' }
+          { name: 'UI', value: 'ui' },
+          { name: 'Misc.', value: 'misc' }
         ]
       }
     ],
