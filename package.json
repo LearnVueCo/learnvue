@@ -1,4 +1,10 @@
 {
   "name": "learnvue",
-  "private": true
+  "private": true,
+  "scripts": {
+    "demo:create": "plop"
+  },
+  "devDependencies": {
+    "plop": "^3.1.2"
+  }
 }

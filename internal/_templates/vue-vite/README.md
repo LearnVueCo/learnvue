@@ -1,4 +1,5 @@
-# Replace me with a Description
+# -- EXAMPLE NAME --
+> A Vite and Vue 3 project
 
 [Link to Video]()
 [Link to Article]()
