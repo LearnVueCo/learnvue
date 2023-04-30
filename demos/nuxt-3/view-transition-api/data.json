@@ -1,0 +1,20 @@
+[
+  {
+    "id": 0,
+    "name": "Beach",
+    "description": "life is a beach im just playing in the sand",
+    "thumbnail": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2073&q=80"
+  },
+  {
+    "id": 1,
+    "name": "Grass",
+    "description": "You should probably touch this.",
+    "thumbnail": "https://images.unsplash.com/photo-1540470174401-f25e9eb17c1c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2067&q=80"
+  },
+  {
+    "id": 2,
+    "name": "Desk Setup",
+    "description": "More monitors = better programmer",
+    "thumbnail": "https://images.unsplash.com/photo-1598986646512-9330bcc4c0dc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80"
+  }
+]
