@@ -9,7 +9,7 @@ const props = defineProps<{
 }>()
 
 let image = ref<HTMLImageElement>()
-const active = useState()
+const active = useState('active')
 
 function handleClick(e: MouseEvent) {
   active.value = props.product.id

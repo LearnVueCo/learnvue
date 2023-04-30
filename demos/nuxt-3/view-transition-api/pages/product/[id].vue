@@ -6,6 +6,8 @@ const route = useRoute()
 const id = route.params.id
 
 const product = data.find((p) => p.id === Number(id))
+const active = useState('active')
+active.value = Number(id)
 </script>
 
 <template>
@@ -19,7 +21,8 @@ const product = data.find((p) => p.id === Number(id))
       }"
     />
     <div class="col-span-5">
-      <h1 class="text-5xl font-black">{{ product.name }}</h1>
+      <NuxtLink to="/" class="hover:underline">Back</NuxtLink>
+      <h1 class="mt-1 text-5xl font-black">{{ product.name }}</h1>
       <div class="flex mt-2 mb-8">
         <div
           class="label rounded-lg py-1 px-2 text-sm font-medium bg-purple-500"

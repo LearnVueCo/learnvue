@@ -4,7 +4,6 @@ import data from '~/data.json'
 
 <template>
   <div>
-    <h1>Home Page</h1>
     <div class="grid grid-cols-12 gap-8">
       <Card
         v-for="product in data"
@@ -15,9 +14,3 @@ import data from '~/data.json'
     </div>
   </div>
 </template>
-
-<style scoped>
-.thumbnail {
-  view-transition-name: full-embed;
-}
-</style>
