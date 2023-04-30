@@ -8,7 +8,7 @@ const props = defineProps<{
   }
 }>()
 
-let image = ref<HTMLImageElement>()
+// persist active state across navigation, so the transition is triggered when going back
 const active = useState('active')
 
 function handleClick(e: MouseEvent) {
@@ -26,7 +26,7 @@ function handleClick(e: MouseEvent) {
     }"
   >
     <div class="relative">
-      <img :src="product.thumbnail" class="rounded-lg" ref="image" />
+      <img :src="product.thumbnail" class="rounded-lg" />
       <div
         class="label absolute bottom-4 right-4 rounded-lg py-1 px-2 text-sm font-medium bg-purple-500"
       >

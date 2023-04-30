@@ -7,6 +7,8 @@ const id = route.params.id
 
 const product = data.find((p) => p.id === Number(id))
 const active = useState('active')
+
+// needed when the user navigates directly to a product page so there's a transition when going back
 active.value = Number(id)
 </script>
 
