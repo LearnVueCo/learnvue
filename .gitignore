@@ -22,4 +22,4 @@ dist
 *.retypewriter
 
 # script files
-*.script.md
+*.script.* 
