@@ -1,11 +1,20 @@
 <script setup lang="ts">
+import { ref } from 'vue'
 import PropsDestructure from './components/PropsDestructure.vue'
 import DefineModel from './components/DefineModel.vue'
 import ExternalTypes from './components/ExternalTypes.vue'
-
-import { ref } from 'vue'
+import GenericList from './components/GenericList.vue'
 
 const msg = ref('hello')
+
+const items = [
+  { _id: '1', name: 'Matt' },
+  { _id: '2', name: 'John' },
+  { _id: '3', name: 'Jane' }
+]
+
+// will give TS-error because it's not an object with _id
+const moreItems = [{ name: 'Matt' }, { name: 'John' }, { name: 'Jane' }]
 </script>
 
 <template>
@@ -20,5 +29,19 @@ const msg = ref('hello')
     <h2 class="mt-16 text-2xl font-bold mb-4">External Types</h2>
     <ExternalTypes />
     <ExternalTypes test-id="example" />
+    <h2 class="mt-16 text-2xl font-bold mb-4">Generics</h2>
+    <GenericList
+      :items="items"
+      @delete="(item) => console.log(`do something with id: ${item._id}`)"
+    >
+      <template #default="{ item }"> here - {{ item._id }} </template>
+    </GenericList>
+    <!-- // @ts-ignore  -->
+    <GenericList
+      :items="moreItems"
+      @delete="(item) => console.log(`do something with id: ${item._id}`)"
+    >
+      <template #default="{ item }"> here - {{ item._id }} </template>
+    </GenericList>
   </div>
 </template>
