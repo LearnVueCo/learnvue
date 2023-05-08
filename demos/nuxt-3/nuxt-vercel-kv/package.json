@@ -11,7 +11,8 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.6.7",
     "@types/node": "^18",
+    "@vercel/kv": "^0.1.2",
     "@vueuse/nuxt": "^10.1.0",
-    "nuxt": "^3.4.3"
+    "nuxt": "npm:nuxt3@latest"
   }
 }
