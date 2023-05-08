@@ -11,9 +11,9 @@ const NUXT_FILES = [
 ]
 
 const VITE_FILES = [
-  'public/vite.svg',
+  'public/favicon.ico',
   'src/assets/vue.svg',
-  'src/components/HelloWorld.vue',
+  'src/components/Foo.vue',
   'src/App.vue',
   'src/main.ts',
   'src/style.css',
