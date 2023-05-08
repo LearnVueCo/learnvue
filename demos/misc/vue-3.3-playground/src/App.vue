@@ -31,6 +31,7 @@ const moreItems = [{ name: 'Matt' }, { name: 'John' }, { name: 'Jane' }]
     <ExternalTypes test-id="example" />
     <h2 class="mt-16 text-2xl font-bold mb-4">Generics</h2>
     <GenericList
+      key-field="_id"
       :items="items"
       @delete="(item) => console.log(`do something with id: ${item._id}`)"
     >
@@ -38,10 +39,11 @@ const moreItems = [{ name: 'Matt' }, { name: 'John' }, { name: 'Jane' }]
     </GenericList>
     <!-- // @ts-ignore  -->
     <GenericList
+      key-field="name"
       :items="moreItems"
-      @delete="(item) => console.log(`do something with id: ${item._id}`)"
+      @delete="(item) => console.log(`do something with id: ${item.name}`)"
     >
-      <template #default="{ item }"> here - {{ item._id }} </template>
+      <template #default="{ item }"> here - {{ item.name }} </template>
     </GenericList>
   </div>
 </template>

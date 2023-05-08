@@ -1,8 +1,9 @@
-<script setup lang="ts" generic="T extends { _id: string }">
+<script setup lang="ts" generic="T">
 import IconAccountBox from '~icons/ri/delete-back-2-fill'
 
 defineProps<{
   items: T[]
+  keyField: keyof T
 }>()
 
 defineEmits<{
@@ -11,7 +12,11 @@ defineEmits<{
 </script>
 <template>
   <ul class="flex flex-col">
-    <li v-for="item in items" :key="item._id" class="flex items-center">
+    <li
+      v-for="item in items"
+      :key="String(item[keyField as  keyof T])"
+      class="flex items-center"
+    >
       <button @click="$emit('delete', item)" class="text-red-500">
         <IconAccountBox />
       </button>
