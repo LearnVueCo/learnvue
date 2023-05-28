@@ -1,9 +1,14 @@
 export default defineEventHandler(async (event) => {
   const storage = useStorage('data')
-  let count = Number((await storage.getItem('count')) ?? 0)
+
+  // get the existing count or default to 0
+  const count = Number((await storage.getItem('count')) ?? 0)
+
+  // store count + 1
   await storage.setItem('count', count + 1)
 
+  // return the count
   return {
-    id: await storage.getItem('count')
+    count: await storage.getItem('count')
   }
 })
