@@ -13,5 +13,12 @@
     "@types/node": "^18",
     "@vueuse/nuxt": "^10.1.0",
     "nuxt": "^3.4.3"
+  },
+  "dependencies": {
+    "@firebase/app-types": "^0.9.0",
+    "firebase": "^9.23.0",
+    "firebase-admin": "^11.9.0",
+    "nuxt-vuefire": "^0.1.6",
+    "vuefire": "^3.1.0"
   }
 }
